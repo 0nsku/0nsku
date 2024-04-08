@@ -75,7 +75,7 @@
 		<img src="https://img.shields.io/badge/Instagram-informational?style=social&logo=instagram"/>
 	</a>
   <a href="https://youtube.com/@hunter_87">
-		<img src="https://img.shields.io/badge/Youtube-informational?style=social&logo=youtube"/>
+		<img src="https://img.shields.io/badge/Youtube-informational?style=social&logo=discord"/>
 	</a>
 	<a href="https://discordapp.com/users/1174797931577102512">
 		<img src="https://img.shields.io/badge/discord-dm?style=social&logo=linkedin"/>
