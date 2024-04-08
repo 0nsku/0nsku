@@ -61,11 +61,11 @@
 <hr/>
 <div align=center>
 
-![Aluerie Stats](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Aluerie&theme=github_dark&count_private=true)
-![Aluerie Stats](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Aluerie&theme=github_dark&count_private=true)
-![Aluerie Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Aluerie&theme=github_dark&count_private=true)
-![Aluerie Summary](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Aluerie&theme=github_dark&count_private=true)
-![Aluerie Summary](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Aluerie&theme=github_dark)
+![Aluerie Stats](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=0nsku&theme=github_dark&count_private=true)
+![Aluerie Stats](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=0nsku&theme=github_dark&count_private=true)
+![Aluerie Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=0nsku&theme=github_dark&count_private=true)
+![Aluerie Summary](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=0nsku&theme=github_dark&count_private=true)
+![Aluerie Summary](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=0nsku&theme=github_dark)
 <br/><br/>
 
 <h2 align="center">📎  Socials  📎</h2>
