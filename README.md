@@ -57,10 +57,14 @@
 
 <br/><br/>
 
-<h2 align="center">✦ Socials ✦</h2>
-<h2 align=[![Twitch](https://img.shields.io/twitch/status/irene_adler__?color=9146FF&label=twitch&logo=twitch&style=for-the-badge&logoColor=9146FF)](https://www.twitch.tv/irene_adler__)
-<h2 align=[![Discord](https://img.shields.io/badge/discord-dm-7289da?style=for-the-badge&logo=discord&logoColor=7289da)](https://discordapp.com/users/312204139751014400)
-<h2 align=[![GitHubIO](https://img.shields.io/badge/website-link-73fdff?style=for-the-badge&logo=githubsponsors&logoColor=73fdff)](https://aluerie.github.io/)
+<h2 align="center">📎  Socials  📎</h2>
+<br>
+<div align=center>
+[![Discord](https://img.shields.io/badge/discord-dm-7289da?style=for-the-badge&logo=discord&logoColor=7289da)](https://discordapp.com/users/312204139751014400)
+<br>
+
+    
+<h2 align="center">🛰 Discord status  🛰</h2>
 <br>
 <div align=center>
 <img src="https://discord.c99.nl/widget/theme-1/1174797931577102512.png">
