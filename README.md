@@ -72,7 +72,8 @@
 <br>
 <div align=center>
     
-[![GitHubIO](https://img.shields.io/badge/website-link-73fdff?style=for-the-badge&logo=githubsponsors&logoColor=73fdff)](https://aluerie.github.io/)
+[![GitHubIO](https://img.shields.io/badge/website-link-73fdff?style=for-the-badge&logo=githubsponsors&logoColor=73fdff)](https://onsku.one/)
+[![Discord](https://img.shields.io/badge/discord-dm-7289da?style=for-the-badge&logo=discord&logoColor=7289da)](https://discordapp.com/users/1174797931577102512)
 <br>
 
     
