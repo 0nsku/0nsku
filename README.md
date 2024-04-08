@@ -1,10 +1,5 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Kanit&size=35&duration=2000&pause=500&color=F75C5C&width=435&lines=hello+user;welcome+to+my\'+profile)](https://github.com/0nsku/)
 
-<p align="center">
-  <a href="https://github.com/0nsku"><img src="https://img.shields.io/github/followers/2ummrs?color=9146FF?color=9146FF&label=followers&style=style=for-the-badge"></img></a>
-  <a href="https://github.com/0nsku"><img src="https://img.shields.io/github/stars/2ummrs?style=for-the-badge"></img></a>
-  <a href="https://kuromi.online"><img src="https://img.shields.io/website?down_message=kuromi.online%20is%20down%21&style=for-the-badge&up_message=kuromi.online%20is%20up%21&url=https%3A%2F%2Fkuromi.online"></img></a>
-</p>
 
 <h1 align="center">
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Onsku!;" />
