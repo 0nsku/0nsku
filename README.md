@@ -19,7 +19,13 @@
   </a>
 </div>
 
- <hr/>
+<h2 align="center">📁 My Projects 📁</h2>
+<br/>
+<div align="center">
+	
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=0nsku&repo=Luminara&theme=tokyonight)](https://github.com/EarthlyEric/Luminara)
+
+</div>
  
 <h2 align="center">⚒️ Languages ⚒️</h2>
 <br/>
@@ -86,7 +92,7 @@
 		<img src="https://img.shields.io/badge/Github-informational?style=social&logo=github"/>
 	</a>
     
-<h2 align="center">🛰 Discord status  🛰</h2>
+<h2 align="center">🛰 Discord Status  🛰</h2>
 <br>
 <div align=center>
 <img src="https://discord.c99.nl/widget/theme-1/1174797931577102512.png">
