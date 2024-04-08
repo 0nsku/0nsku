@@ -50,9 +50,8 @@
 
 <br/><br/>
 
-## Contacts
-
-<p align="center">  
+<p align="center">
+<h2>✦ My Discord ✦</h2>
 <img src="https://discord.c99.nl/widget/theme-1/1174797931577102512.png">
 </p>
 
