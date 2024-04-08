@@ -54,7 +54,7 @@
   <br/>
   <img width=325 src="https://github-readme-stats.vercel.app/api/top-langs/?username=0nsku&show_icons=true&hide_border=true&layout=compact&langs_count=8&theme=react&&border_radius=10" alt="top langs" />
   <br/>
-  <img src="https://github-profile-trophy.vercel.app/?username=0nsku&theme=react&column=-1&no-bg=true" alt="trophys" />
+  <img src="[https://github-profile-trophy.vercel.app/?username=0nsku&theme=react&column=-1&no-bg=true](https://github-profile-trophy.vercel.app/?username=Aluerie&theme=darkhub&column=-1&no-bg=true)" alt="trophys" />
   <br/>
 </div>
 
