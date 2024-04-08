@@ -52,10 +52,10 @@
   <img width=390 src="https://github-readme-streak-stats-salesp07.vercel.app/?user=0nsku&count_private=true&theme=react&border_radius=10" alt="streak stats"/>
   <img width=390 src="https://github-readme-stats-salesp07.vercel.app/api?username=0nsku&count_private=true&show_icons=true&theme=react&rank_icon=github&border_radius=10" alt="readme stats" />
   <br/>
-  <img width=325 src="https://github-readme-stats.vercel.app/api/top-langs/?username=0nsku&show_icons=true&hide_border=true&layout=compact&langs_count=8&theme=tokyonight" alt="top langs" />
+  <img width=325 src="https://github-readme-stats.vercel.app/api/top-langs/?username=0nsku&show_icons=true&hide_border=true&layout=compact&langs_count=8&theme=react" alt="top langs" />
   <br/>
   <img src="https://github-profile-trophy.vercel.app/?username=0nsku&theme=darkhub&column=-1&no-bg=true" alt="trophys" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=0nsku&theme=github_dark&count_private=true" alt="repos" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=0nsku&theme=react&count_private=true" alt="repos" />
 </div>
 
 <br/><br/>
