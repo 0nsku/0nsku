@@ -71,7 +71,18 @@
 <br/><br/>
 
 <h2 align="center">📎  Socials  📎</h2>
-
+	<a href="https://instagram.com/im_hunter87">
+		<img src="https://img.shields.io/badge/Instagram-informational?style=social&logo=instagram"/>
+	</a>
+  <a href="https://youtube.com/@hunter_87">
+		<img src="https://img.shields.io/badge/Youtube-informational?style=social&logo=youtube"/>
+	</a>
+	<a href="https://linkedin.com/in/hunter87/">
+		<img src="https://img.shields.io/badge/Linked_In-informational?style=social&logo=linkedin"/>
+	</a>
+	<a href="https://www.github.com/hunter87ff/">
+		<img src="https://img.shields.io/badge/Github-informational?style=social&logo=github"/>
+	</a>
     
 <h2 align="center">🛰 Discord status  🛰</h2>
 <br>
