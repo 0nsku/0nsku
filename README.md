@@ -1,7 +1,3 @@
-</p>
-<p align="center">  
-<img src="https://komarev.com/ghpvc/?username=cop-discord">
-</p>
 
 <h1 align="center">
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Onsku!;" />
@@ -10,6 +6,11 @@
 <h3 align="center">Self taught developer:)</h3>
 
 <br/>
+
+</p>
+<p align="center">  
+<img src="https://komarev.com/ghpvc/?username=0nsku">
+</p>
  
 <div align="center"> 
   <a href="mailto:pedro.sales.muniz@gmail.com">
