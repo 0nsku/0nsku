@@ -74,11 +74,11 @@
 	<a href="https://instagram.com/onsku.aep">
 		<img src="https://img.shields.io/badge/Instagram-informational?style=social&logo=instagram"/>
 	</a>
-  <a href="https://youtube.com/@hunter_87">
-		<img src="https://img.shields.io/badge/Youtube-informational?style=social&logo=youtube"/>
+  <a href="https://www.tiktok.com/@0nsku">
+		<img src="https://img.shields.io/badge/Tiktok-informational?style=social&logo=tiktok"/>
 	</a>
 	<a href="https://discordapp.com/users/1174797931577102512">
-		<img src="https://img.shields.io/badge/discord-dm?style=social&logo=discord"/>
+		<img src="https://img.shields.io/badge/Discord-information?style=social&logo=discord"/>
 	</a>
 	<a href="https://www.github.com/0nsku/">
 		<img src="https://img.shields.io/badge/Github-informational?style=social&logo=github"/>
