@@ -84,6 +84,6 @@
 <br>
 <div align="center">  
   
-![](https://superherojacked.com/wp-content/uploads/2023/04/Ken-Kaneki-Quotes-2&theme=dark)
+![](https://raw.githubusercontent.com/sananth12/Quote-of-the-Day/master/images/yosay.png&theme=dark)
 
 <hr/>
