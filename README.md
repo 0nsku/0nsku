@@ -84,6 +84,6 @@
 <br>
 <div align="center">  
   
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
+![](https://superherojacked.com/wp-content/uploads/2023/04/Ken-Kaneki-Quotes-2.jpg&theme=dark)
 
 <hr/>
