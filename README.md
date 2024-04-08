@@ -79,11 +79,4 @@
 <img src="https://discord.c99.nl/widget/theme-1/1174797931577102512.png">
 <br>
 
-    
-<h2 align="center">📖 Random Quote  📖</h2>
-<br>
-<div align="center">  
-  
-![](https://raw.githubusercontent.com/sananth12/Quote-of-the-Day/master/images/yosay.png&theme=dark)
-
 <hr/>
