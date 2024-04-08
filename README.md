@@ -31,8 +31,8 @@
 <h2 align="center">⚒️ Most Used Languages ⚒️</h2>
 <br/>
 <div align="center">
-    <img src="https://skillicons.dev/icons?i=,html,css,php,lua,c++,c+" />
-    <img src="https://skillicons.dev/icons?i=nodejs,python,javascript,mysql,c+,lua" /><br>
+    <img src="https://skillicons.dev/icons?i=,html,css,php,lua,cc,c" />
+    <img src="https://skillicons.dev/icons?i=nodejs,python,javascript,mysql,c,lua" /><br>
 </div>
 
 <br/>
