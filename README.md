@@ -1,4 +1,4 @@
-
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Kanit&size=35&duration=2000&pause=500&color=F75C5C&width=435&lines=hello+user;welcome+to+my\'+profile)](https://github.com/0nsku/)
 <h1 align="center">
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Onsku!;" />
 </h1>
