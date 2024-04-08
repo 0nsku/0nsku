@@ -57,7 +57,7 @@
 
 <br/><br/>
 
-<h2 align="center">✦ My Discord ✦</h2>
+<h2 align="center">✦ Socials ✦</h2>
 <br>
 <div align=center>
 <img src="https://discord.c99.nl/widget/theme-1/1174797931577102512.png">
