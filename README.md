@@ -46,7 +46,7 @@ bot = onsku(ReadMe):
 
 bot.run(token=onsku, reconnect=True)
 ```
-
+<hr/>
 </div>
  
 <h2 align="center">⚒️ Languages ⚒️</h2>
