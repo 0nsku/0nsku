@@ -26,29 +26,6 @@
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=0nsku&repo=Kuromi&theme=tokyonight)](https://github.com/0nsku/Kuromi)
 <hr/>
 
-
-```py
-from GitHub import ReadMe
-
-bot = onsku(ReadMe):
-    "[github.com/0nsku/0nsku/README.md)"
-
-    def __init__(self):
-        self.username = "onsku"
-        self.description = "self taught developer coding experience almost 5years"
-        self.favorite_languages = [
-            "python",
-            "javascript",
-            "node.js",
-            "html",
-            "css"
-        ]
-
-bot.run(token=onsku, reconnect=True)
-```
-</div>
-
-
  
 <h2 align="center">⚒️ Languages ⚒️</h2>
 <br/>
