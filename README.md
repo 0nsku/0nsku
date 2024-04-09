@@ -24,7 +24,7 @@
 <div align="center">
 	
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=0nsku&repo=Kuromi&theme=tokyonight)](https://github.com/0nsku/Kuromi)
-
+<br/>
 <hr/>
 
 ```py
