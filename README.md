@@ -25,6 +25,20 @@
 	
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=0nsku&repo=Kuromi&theme=tokyonight)](https://github.com/0nsku/Kuromi)
 
+
+```py
+from GitHub import ReadMe
+
+bot = onsku(ReadMe):
+    "/vqea/vqea/README.md"
+
+    def __init__(self):
+        self.username = "onsku"
+        self.description = "coding since 1/26/23, don't forget to follow and star for more :)"
+
+bot.run(token=onsku, reconnect=True)
+```
+
 </div>
  
 <h2 align="center">⚒️ Languages ⚒️</h2>
