@@ -2,7 +2,7 @@
 
 </p>
 <p align="center">
-<img src="onsku.png" width="300" />
+<img src="onsku.png" width="600" />
  </p>
 
 <h1 align="center">
