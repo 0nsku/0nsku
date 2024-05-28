@@ -17,6 +17,18 @@
 <p align="center">  
 <img src="https://komarev.com/ghpvc/?username=0nsku">
 </p>
+</div>
+<!-- Terminal -->
+    <div align="center">
+        <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="https://i.ibb.co/5FK27K0/output-gif.gif">
+            <source media="(prefers-color-scheme: light)" srcset="https://i.ibb.co/5FK27K0/output-gif.gif">
+            <img alt="GIFOS" src="https://i.ibb.co/5FK27K0/output-gif.gif">
+        </picture>
+    </div>
+    
+<!-- /Terminal -->
+
  
 <div align="center"> 
 <img src="https://i.pinimg.com/originals/e2/b0/92/e2b092cf807838772079a06f64dabcce.gif" width="300"/>
