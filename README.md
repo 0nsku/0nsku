@@ -17,19 +17,16 @@
 <p align="center">  
 <img src="https://komarev.com/ghpvc/?username=0nsku">
 </p>
+
 </div>
 <!-- Terminal -->
     <div align="center">
         <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="https://i.ibb.co/zN4ydYY/gifgit.gif">
-            <source media="(prefers-color-scheme: light)" srcset="https://i.ibb.co/zN4ydYY/gifgit.gif">
-            <img alt="[GIFOS](https://ibb.co/stV07GG)" src="https://i.ibb.co/zN4ydYY/gifgit.gif">
+            <source media="(prefers-color-scheme: dark)" srcset="https://i.ibb.co/5FK27K0/output-gif.gif">
+            <source media="(prefers-color-scheme: light)" srcset="https://i.ibb.co/5FK27K0/output-gif.gif">
+            <img alt="GIFOS" src="https://i.ibb.co/5FK27K0/output-gif.gif">
         </picture>
-    </div>
-    
 <!-- /Terminal -->
-
-<hr>
 
  
 <div align="center"> 
