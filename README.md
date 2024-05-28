@@ -21,9 +21,9 @@
 <!-- Terminal -->
     <div align="center">
         <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="https://i.ibb.co/5FK27K0/output-gif.gif">
-            <source media="(prefers-color-scheme: light)" srcset="https://i.ibb.co/5FK27K0/output-gif.gif">
-            <img alt="GIFOS" src="https://i.ibb.co/5FK27K0/output-gif.gif">
+            <source media="(prefers-color-scheme: dark)" srcset="{image.url}">
+            <source media="(prefers-color-scheme: light)" srcset="{image.url}">
+            <img alt="GIFOS" src="{image.url}">
         </picture>
     </div>
     
