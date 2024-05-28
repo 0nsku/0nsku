@@ -21,11 +21,9 @@
 </div>
 <!-- Terminal -->
     <div align="center">
-        <picture>
             <source media="(prefers-color-scheme: dark)" srcset="https://cdn.discordapp.com/attachments/1228426766142410865/1245150655794905200/gifgit.gif?ex=6657b46a&is=665662ea&hm=a00ef29df2168767bc699c9d0d8175f421565a137f5a017076813c4832afc623">
             <source media="(prefers-color-scheme: light)" srcset="https://cdn.discordapp.com/attachments/1228426766142410865/1245150655794905200/gifgit.gif?ex=6657b46a&is=665662ea&hm=a00ef29df2168767bc699c9d0d8175f421565a137f5a017076813c4832afc623">
             <img alt="GIFOS" src="https://cdn.discordapp.com/attachments/1228426766142410865/1245150655794905200/gifgit.gif?ex=6657b46a&is=665662ea&hm=a00ef29df2168767bc699c9d0d8175f421565a137f5a017076813c4832afc623">
-        </picture>
 <!-- /Terminal -->
 
  
