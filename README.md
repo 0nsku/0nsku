@@ -11,7 +11,9 @@
 
 17y self taught developer
 
+<p align="center">
 <img src="https://files.catbox.moe/uo1qxi.jpg" width="300"/>
+</p>
 
 ## 💻 Skills
 <p>
