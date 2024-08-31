@@ -15,7 +15,7 @@
 <img src="https://files.catbox.moe/uo1qxi.jpg" width="300"/>
 </p>
 
-<h3 align="center">A passionate frontend developer from India</h3>
+<h3 align="center">A passionate self taught developer</h3>
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=0nsku" alt="0nsku" /></a> </p>
 
