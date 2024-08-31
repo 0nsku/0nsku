@@ -35,15 +35,8 @@
 <h2 align="center">⚒️ Languages ⚒️</h2>
 <br/>
 <div align="center">
-    <img src="https://skillicons.dev/icons?i=,html,css,vscode,github,tailwind,git,php,lua" />
-    <img src="https://skillicons.dev/icons?i=nodejs,python,javascript,typescript,mongodb,c,java,nextjs,mysql,flask" /><br>
-</div>
-
-<h2 align="center">⚒️ Most Used Languages ⚒️</h2>
-<br/>
-<div align="center">
-    <img src="https://skillicons.dev/icons?i=,html,css,php,lua" />
-    <img src="https://skillicons.dev/icons?i=nodejs,python,javascript,mysql" /><br>
+    <img src="https://skillicons.dev/icons?i=js,html,css,ts,tailwind,react,php,flask" />
+    <img src="https://skillicons.dev/icons?i=supabase,mysql,mongodb,aws," /><br>
 </div>
 
 <br/>
