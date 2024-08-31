@@ -6,7 +6,7 @@
   <a><img src="https://readme-typing-svg.herokuapp.com?color=3DF7E2&size=30&center=true&lines=Self+taught+developer;Experienced+in+python;js+html+css+lua"></a>
 </p>
 <p align="center">  
-<img src="https://komarev.com/ghpvc/?username=0nsku">
+<img src="https://komarev.com/ghpvc/?username=0nsku%20Views&color=12&icon=5&pretty=true">
 </p>
 
 17y self taught developer
