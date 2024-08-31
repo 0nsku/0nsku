@@ -57,3 +57,7 @@
 <p><img src="https://github-readme-streak-stats.herokuapp.com/?user=0nsku"><p>
 
 <p><img src="https://visitcount.itsvg.in/api?id=0nsku&label=Profile%20Views&color=12&icon=5&pretty=true"><p>
+
+<p align="center">  
+<img src="https://discord.c99.nl/widget/theme-1/1262567715072376845.png">
+</p>
