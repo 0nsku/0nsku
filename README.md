@@ -35,8 +35,8 @@
 <h2 align="center">⚒️ Languages ⚒️</h2>
 <br/>
 <div align="center">
-    <img src="https://skillicons.dev/icons?i=js,html,css,ts,tailwind,react,php,flask" />
-    <img src="https://skillicons.dev/icons?i=supabase,mysql,mongodb,aws" /><br>
+    <img src="https://skillicons.dev/icons?i=js,html,css,ts,tailwind,react,php,flask&perline=3" />
+    <img src="https://skillicons.dev/icons?i=supabase,mysql,mongodb,aws&perline=3" /><br>
 </div>
 
 <br/>
