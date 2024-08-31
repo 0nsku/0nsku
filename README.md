@@ -36,7 +36,7 @@
 <br/>
 <div align="center">
     <img src="https://skillicons.dev/icons?i=js,html,css,ts,tailwind,react,php,flask" />
-    <img src="https://skillicons.dev/icons?i=supabase,mysql,mongodb,aws," /><br>
+    <img src="https://skillicons.dev/icons?i=supabase,mysql,mongodb,aws" /><br>
 </div>
 
 <br/>
