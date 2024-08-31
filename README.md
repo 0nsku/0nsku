@@ -6,7 +6,7 @@
   <a><img src="https://readme-typing-svg.herokuapp.com?color=3DF7E2&size=30&center=true&lines=Self+taught+developer;Experienced+in+python;js+html+css+lua"></a>
 </p>
 <p align="center">  
-<img src="https://komarev.com/ghpvc/?username=0nsku&label=Profile%20Views&color=12&icon=5&pretty=true">
+<img src="https://komarev.com/ghpvc/?username=0nsku&label=Profile%20Views&color=12=true">
 </p>
 
 17y self taught developer
@@ -55,8 +55,6 @@
 <p><img src="https://metrics.lecoq.io/0nsku"><p>
 
 <p><img src="https://github-readme-streak-stats.herokuapp.com/?user=0nsku"><p>
-
-<p><img src="https://visitcount.itsvg.in/api?id=0nsku&label=Profile%20Views&color=12&icon=5&pretty=true"><p>
 
 <p align="center">  
 <img src="https://discord.c99.nl/widget/theme-1/1262567715072376845.png">
