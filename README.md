@@ -16,8 +16,3 @@
 </p>
 
 <h3 align="center">A passionate self taught developer</h3>
-
-
-<p align="center">  
-<img src="https://discord.c99.nl/widget/theme-1/1262567715072376845.png">
-</p>
