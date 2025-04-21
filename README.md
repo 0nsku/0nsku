@@ -13,18 +13,16 @@
   <img src="https://skillicons.dev/icons?i=nextjs,react,tailwind,typescript,javascript,python,go,rust,vite,fastapi,zod,docker,git,github,kubernetes,aws,vercel,cloudflare,mysql,mariadb,postgres,supabase,redis,vscode&perline=10" />
 </p>
 
-### 📊 GitHub Stats
+---
+
+### 🏆 Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=0nsku&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="0nsku's GitHub Stats" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=0nsku&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=0nsku&theme=github-compact&hide_border=true" alt="GitHub Activity Graph" />
+  <img src="https://img.shields.io/badge/Code%20Time-1000%20Hours-orange?logo=wakatime" alt="Code Time" />
+  <img src="https://img.shields.io/badge/Contributions-2277%20in%202025-blue?logo=github" alt="Contributions" />
+  <img src="https://img.shields.io/badge/Tech%20Stack-Python%2C%20React%2C%20Node.js-blueviolet?logo=python" alt="Tech Stack" />
+  <img src="https://img.shields.io/badge/Work%20In%20Progress-Discord%20Bot%20-%23FF5733" alt="Work In Progress" />
+  <img src="https://img.shields.io/badge/Projects%20Completed-25-green" alt="Projects Completed" />
 </p>
 
 ---
@@ -53,8 +51,6 @@
     <img src="https://img.shields.io/badge/Portfolio-0nsku.dev-black?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
 </p>
-
----
 
 <p align="center">
   <img src="https://media.tenor.com/qC1xK3FzZswAAAAC/satoru-gojo-eyes.gif" width="200px" alt="Gojo Stare" />
