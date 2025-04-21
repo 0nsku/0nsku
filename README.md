@@ -18,34 +18,15 @@
 ### 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=0nsku&show_icons=true&theme=tokyonight&hide_border=true" />
+  <img src="https://github-readme-stats.vercel.app/api?username=0nsku&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="0nsku's GitHub Stats" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=0nsku&theme=tokyonight&hide_border=true" />
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=0nsku&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=0nsku&theme=github-compact&hide_border=true" />
-</p>
-
----
-
-### 🕒 Code Time (WakaTime)
-
-<!--START_SECTION:waka-->
-<!-- Connect your IDE to https://wakatime.com for this to update -->
-<!--END_SECTION:waka-->
-
----
-
-### 📦 GitHub Info
-
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=0nsku&theme=tokyonight" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=0nsku&theme=tokyonight" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=0nsku&theme=tokyonight" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=0nsku&theme=tokyonight&utcOffset=8" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=0nsku&theme=github-compact&hide_border=true" alt="GitHub Activity Graph" />
 </p>
 
 ---
