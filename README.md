@@ -2,7 +2,7 @@
 <h3 align="center">A chill full-stack developer crafting websites & Discord bots ⚡</h3>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00F1FF&center=true&vCenter=true&width=500&height=45&lines=Self-taught+Python+Developer;Full+Stack+Developer;Frontend+%2B+Backend+Engineer;Discord+Bot+Maker;TypeScript+Tinkerer;FastAPI+%26+Rust+Enthusiast;Code.+Chill.+Repeat.+🧘‍♂️" alt="Animated Dev Titles" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=800&color=00F1FF&center=true&vCenter=true&width=600&lines=Self-taught+Python+Developer;Full+Stack+Developer;Frontend+%2B+Backend+Engineer;Discord+Bot+Maker;TypeScript+Tinkerer;FastAPI+%26+Rust+Enthusiast;Code.+Chill.+Repeat+🧘‍♂️" alt="Typing Animation" />
 </p>
 
 ---
@@ -10,7 +10,7 @@
 ### 🧰 Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=nextjs,react,tailwind,typescript,javascript,python,go,rust,vite,fastapi,zod,docker,git,github,kubernetes,aws,vercel,cloudflare,mysql,mariadb,postgres,supabase,redis,vscode&theme=light" />
+  <img src="https://skillicons.dev/icons?i=nextjs,react,tailwind,typescript,javascript,python,go,rust,vite,fastapi,zod,docker,git,github,kubernetes,aws,vercel,cloudflare,mysql,mariadb,postgres,supabase,redis,vscode&perline=10" />
 </p>
 
 ---
@@ -34,10 +34,8 @@
 ### 🕒 Code Time (WakaTime)
 
 <!--START_SECTION:waka-->
-<!-- Automatically updated from WakaTime -->
+<!-- Connect your IDE to https://wakatime.com for this to update -->
 <!--END_SECTION:waka-->
-
-> To enable this, connect your IDE to [WakaTime](https://wakatime.com) and enable GitHub integration.
 
 ---
 
