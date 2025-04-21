@@ -1,8 +1,8 @@
 <h1 align="center">Hey, I'm 0nsku 👋</h1>
-<h3 align="center">Chill full-stack dev building websites & Discord bots ⚡</h3>
+<h3 align="center">A chill full-stack developer crafting websites & Discord bots ⚡</h3>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=3000&pause=800&color=F7F7F7&center=true&vCenter=true&width=460&lines=Web+dev+with+Next.js+%26+TailwindCSS;Discord+bot+maker+with+Python+%26+TypeScript;Code.+Chill.+Repeat+💻🧘" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00F1FF&center=true&vCenter=true&width=500&height=45&lines=Self-taught+Python+Developer;Full+Stack+Developer;Frontend+%2B+Backend+Engineer;Discord+Bot+Maker;TypeScript+Tinkerer;FastAPI+%26+Rust+Enthusiast;Code.+Chill.+Repeat.+🧘‍♂️" alt="Animated Dev Titles" />
 </p>
 
 ---
@@ -10,12 +10,12 @@
 ### 🧰 Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=nextjs,react,tailwind,javascript,typescript,python,go,rust,html,css,nodejs,discord,docker&theme=light" />
+  <img src="https://skillicons.dev/icons?i=nextjs,react,tailwind,typescript,javascript,python,go,rust,vite,fastapi,zod,docker,git,github,kubernetes,aws,vercel,cloudflare,mysql,mariadb,postgres,supabase,redis,vscode&theme=light" />
 </p>
 
 ---
 
-### 📈 GitHub Stats
+### 📊 GitHub Stats
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=0nsku&show_icons=true&theme=tokyonight&hide_border=true" />
@@ -31,33 +31,56 @@
 
 ---
 
-### 👀 Unique Profile Views
+### 🕒 Code Time (WakaTime)
+
+<!--START_SECTION:waka-->
+<!-- Automatically updated from WakaTime -->
+<!--END_SECTION:waka-->
+
+> To enable this, connect your IDE to [WakaTime](https://wakatime.com) and enable GitHub integration.
+
+---
+
+### 📦 GitHub Info
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=0nsku&label=Profile+Views&color=ff69b4&style=flat-square" alt="0nsku" />
-</p>
-
-<p align="center">
-  <img src="https://media.tenor.com/p0G_bmA2fNUAAAAC/anime-eyes.gif" width="300px" alt="Anime eyes" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=0nsku&theme=tokyonight" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=0nsku&theme=tokyonight" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=0nsku&theme=tokyonight" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=0nsku&theme=tokyonight&utcOffset=8" />
 </p>
 
 ---
 
-### 💬 Let's connect
+### 👀 Profile Views
 
 <p align="center">
-  <a href="https://twitter.com/0nsku" target="_blank"><img src="https://img.shields.io/badge/Twitter-%230077B5?style=flat&logo=twitter&logoColor=white" /></a>
-  <a href="https://0nsku.dev" target="_blank"><img src="https://img.shields.io/badge/Portfolio-0nsku.dev-black?style=flat&logo=vercel&logoColor=white" /></a>
+  <img src="https://komarev.com/ghpvc/?username=0nsku&label=Profile+Views&color=ff69b4&style=flat-square" alt="Profile Views" />
 </p>
 
----
-
 <p align="center">
-  <img src="https://media.tenor.com/qC1xK3FzZswAAAAC/satoru-gojo-eyes.gif" width="200px" alt="Gojo stare" />
+  <img src="https://media.tenor.com/p0G_bmA2fNUAAAAC/anime-eyes.gif" width="280px" alt="Anime Eyes" />
 </p>
 
 <p align="center"><i>“Eyes sharp, code sharper.” – Gojo, probably.</i></p>
 
 ---
 
-🧘‍♂️ _Chill, Code, Conquer_
+### 🔗 Let's Connect
+
+<p align="center">
+  <a href="https://twitter.com/0nsku" target="_blank">
+    <img src="https://img.shields.io/badge/Twitter-%230077B5?style=for-the-badge&logo=twitter&logoColor=white" />
+  </a>
+  <a href="https://0nsku.dev" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-0nsku.dev-black?style=for-the-badge&logo=vercel&logoColor=white" />
+  </a>
+</p>
+
+---
+
+<p align="center">
+  <img src="https://media.tenor.com/qC1xK3FzZswAAAAC/satoru-gojo-eyes.gif" width="200px" alt="Gojo Stare" />
+</p>
+
+<p align="center"><code>🧘‍♂️ Code. Chill. Conquer.</code></p>
