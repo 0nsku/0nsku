@@ -41,17 +41,6 @@
 
 ---
 
-### 🔗 Let's Connect
-
-<p align="center">
-  <a href="https://twitter.com/0nsku" target="_blank">
-    <img src="https://img.shields.io/badge/Twitter-%230077B5?style=for-the-badge&logo=twitter&logoColor=white" />
-  </a>
-  <a href="https://0nsku.dev" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-0nsku.dev-black?style=for-the-badge&logo=vercel&logoColor=white" />
-  </a>
-</p>
-
 <p align="center">
   <img src="https://media.tenor.com/qC1xK3FzZswAAAAC/satoru-gojo-eyes.gif" width="200px" alt="Gojo Stare" />
 </p>
