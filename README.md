@@ -13,8 +13,6 @@
   <img src="https://skillicons.dev/icons?i=nextjs,react,tailwind,typescript,javascript,python,go,rust,vite,fastapi,zod,docker,git,github,kubernetes,aws,vercel,cloudflare,mysql,mariadb,postgres,supabase,redis,vscode&perline=10" />
 </p>
 
----
-
 ### 📊 GitHub Stats
 
 <p align="center">
