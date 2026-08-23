@@ -9,7 +9,6 @@
 
 <p align="center">
   <a href="https://github.com/0nsku"><img src="https://komarev.com/ghpvc/?username=0nsku&label=Profile%20Views&color=00F1FF&style=flat-square" alt="Profile Views" /></a>
-  <img src="https://img.shields.io/github/followers/0nsku?label=Followers&style=flat-square&color=7B2FFF" alt="Followers" />
   <img src="https://img.shields.io/github/last-commit/0nsku/0nsku?label=Last%20Update&color=00F1FF&style=flat-square" alt="Last Commit" />
 </p>
 
@@ -53,7 +52,7 @@ const onsku = {
 
 <p align="center">
   <a href="https://github.com/0nsku">
-    <img height="165" src="https://github-readme-stats.vercel.app/api?username=0nsku&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F1FF&icon_color=7B2FFF&text_color=C9D1D9&count_private=true&include_all_commits=true&cache_seconds=1800" alt="GitHub Stats" />
+    <img height="165" src="https://github-readme-stats-anuraghazra1.vercel.app/api?username=0nsku&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F1FF&icon_color=7B2FFF&text_color=C9D1D9&include_all_commits=true&cache_seconds=1800" alt="GitHub Stats" />
   </a>
   <a href="https://github.com/0nsku">
     <img height="165" src="https://streak-stats.demolab.com?user=0nsku&theme=tokyonight&hide_border=true&background=0D1117&ring=00F1FF&fire=7B2FFF&currStreakLabel=00F1FF" alt="Streak Stats" />
@@ -61,7 +60,7 @@ const onsku = {
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=0nsku&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F1FF&text_color=C9D1D9&langs_count=8&hide=jupyter%20notebook" alt="Top Languages" />
+  <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/top-langs/?username=0nsku&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F1FF&text_color=C9D1D9&langs_count=8&hide=jupyter%20notebook" alt="Top Languages" />
 </p>
 
 <p align="center">
@@ -69,15 +68,12 @@ const onsku = {
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=0nsku&theme=tokyonight&no-bg=true&no-frame=true&margin-w=15&column=6" alt="Trophy" />
+  <img src="https://github-trophies.vercel.app/?username=0nsku&theme=tokyonight&no-bg=true&no-frame=true&margin-w=15&column=6" alt="Trophy" />
 </p>
 
 ---
 
-### 👀 Profile Views
-
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=0nsku&label=Profile+Views&color=7B2FFF&style=flat-square" alt="Profile Views" />
   <img src="https://media.tenor.com/p0G_bmA2fNUAAAAC/anime-eyes.gif" width="260" alt="Anime Eyes" />
 </p>
 <p align="center"><i>“Eyes sharp, code sharper.” – Gojo, probably.</i></p>
