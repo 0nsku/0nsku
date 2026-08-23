@@ -71,3 +71,17 @@ Total this week   0 secs
 *Last updated: 23/08/2026 19:59:32 UTC*
 
 <!--END_SECTION:waka-->
+
+---
+
+<div align="center">
+
+### 📈 Contributions
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=0nsku&theme=github-dark&hide_border=true&bg_color=1e1e1e&color=888888&line=aaaaaa&point=444444&area=true&area_color=2a2a2a" alt="Activity Graph" />
+
+<img src="https://ghchart.rshah.org/1e1e1e/0nsku" alt="Contributions Chart" />
+
+</div>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=1e1e1e&height=120&section=footer" />
