@@ -53,30 +53,32 @@
 </div>
 
 ---
-
 <!--START_SECTION:waka-->
 ```text
 GitHub:
-Contributions 2026       4529
-Current streak           0 days
-Longest streak           0 days
+Contributions 2026       2277
+Current streak           12 days
+Longest streak           63 days
 Public repos             1
-Private repos            102
+Private repos            24
 
-
-Total this week   0 secs
+Total this week   31 hrs 12 mins
 
 Languages:
-Python               62.1%        ███████████████░░░░░░░░░░   62.07 %
-TypeScript           25.9%        ██████░░░░░░░░░░░░░░░░░░░   25.86 %
-CSS                  4.3%         █░░░░░░░░░░░░░░░░░░░░░░░░   4.33 %
-JavaScript           2.9%         ░░░░░░░░░░░░░░░░░░░░░░░░░   2.87 %
-Lua                  1.6%         ░░░░░░░░░░░░░░░░░░░░░░░░░   1.61 %
+TypeScript               18 hrs 42 mins   ██████████████░░░░░░░░░░░   59.90 %
+Python                   6 hrs 14 mins    █████░░░░░░░░░░░░░░░░░░░░   19.97 %
+Rust                     2 hrs 08 mins    █░░░░░░░░░░░░░░░░░░░░░░░░   6.84 %
+Go                       1 hrs 45 mins    ░░░░░░░░░░░░░░░░░░░░░░░░░   5.61 %
 
+Editors:
+Visual Studio Code       28 hrs 03 mins   ████████████████████░░░░░   89.88 %
+Cursor                   3 hrs 09 mins    ██░░░░░░░░░░░░░░░░░░░░░░░   10.12 %
+
+OS:
+Windows                  31 hrs 12 mins   █████████████████████████   100.00 %
 ```
 
-*Last updated: 23/08/2026 20:07:14 UTC*
-
+*Last updated: 23/08/2026 00:00 UTC — auto-updated daily via waka-stats*
 <!--END_SECTION:waka-->
 
 ---
@@ -85,9 +87,7 @@ Lua                  1.6%         ░░░░░░░░░░░░░░░�
 
 ### 📈 Contributions
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=0nsku&theme=github-dark&hide_border=true&bg_color=1e1e1e&color=888888&line=aaaaaa&point=444444&area=true&area_color=2a2a2a" alt="Activity Graph" />
-
-<img src="https://ghchart.rshah.org/1e1e1e/0nsku" alt="Contributions Chart" />
+<img src="https://raw.githubusercontent.com/0nsku/0nsku/output/github-snake-dark.svg" alt="Snake contributions (private-aware, updates like waka)" />
 
 </div>
 
