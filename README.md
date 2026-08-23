@@ -51,25 +51,15 @@ const onsku = {
 ### 📊 Stats — Live from GitHub API
 
 <p align="center">
-  <a href="https://github.com/0nsku">
-    <img height="165" src="https://github-readme-stats-anuraghazra1.vercel.app/api?username=0nsku&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F1FF&icon_color=7B2FFF&text_color=C9D1D9&include_all_commits=true&cache_seconds=1800" alt="GitHub Stats" />
-  </a>
-  <a href="https://github.com/0nsku">
-    <img height="165" src="https://streak-stats.demolab.com?user=0nsku&theme=tokyonight&hide_border=true&background=0D1117&ring=00F1FF&fire=7B2FFF&currStreakLabel=00F1FF" alt="Streak Stats" />
-  </a>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/top-langs/?username=0nsku&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F1FF&text_color=C9D1D9&langs_count=8&hide=jupyter%20notebook" alt="Top Languages" />
-</p>
-
-<p align="center">
   <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=0nsku&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=00F1FF&line=7B2FFF&point=C9D1D9&area=true" alt="Activity Graph" />
 </p>
 
 <p align="center">
-  <img src="https://github-trophies.vercel.app/?username=0nsku&theme=tokyonight&no-bg=true&no-frame=true&margin-w=15&column=6" alt="Trophy" />
+  <img height="165" src="https://github-readme-stats-anuraghazra1.vercel.app/api?username=0nsku&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F1FF&icon_color=7B2FFF&text_color=C9D1D9&include_all_commits=true&cache_seconds=1800" alt="GitHub Stats" />
+  <img height="165" src="https://github-readme-stats-anuraghazra1.vercel.app/api/top-langs/?username=0nsku&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F1FF&text_color=C9D1D9&langs_count=8&hide=jupyter%20notebook" alt="Top Languages" />
 </p>
+
+> **Why stats show `0`?** `api.github.com/users/0nsku` → `public_repos: 1` (only `0nsku/0nsku` is public). Stars/commits/PRs count **public only**. Your `2277 contributions` are private. To count private: deploy your own [github-readme-stats](https://github.com/anuraghazra/github-readme-stats#deploy-on-your-own-vercel-instance) on Vercel with a `PAT_1` token and change the domain, or make repos public. Streak card removed — it needs daily public commits, otherwise shows `Failed to retrieve contributions`.
 
 ---
 
