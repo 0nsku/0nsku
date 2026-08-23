@@ -53,30 +53,21 @@
 </div>
 
 ---
+
 <!--START_SECTION:waka-->
 ```text
 GitHub:
-Contributions 2026       2277
-Current streak           12 days
-Longest streak           63 days
+Contributions 2026       0
+Current streak           0 days
+Longest streak           0 days
 Public repos             1
-Private repos            24
+Private repos            0
 
-Total this week   31 hrs 12 mins
 
-Languages:
-TypeScript               18 hrs 42 mins   ██████████████░░░░░░░░░░░   59.90 %
-Python                   6 hrs 14 mins    █████░░░░░░░░░░░░░░░░░░░░   19.97 %
-Rust                     2 hrs 08 mins    █░░░░░░░░░░░░░░░░░░░░░░░░   6.84 %
-Go                       1 hrs 45 mins    ░░░░░░░░░░░░░░░░░░░░░░░░░   5.61 %
+Total this week   0 secs
 
-Editors:
-Visual Studio Code       28 hrs 03 mins   ████████████████████░░░░░   89.88 %
-Cursor                   3 hrs 09 mins    ██░░░░░░░░░░░░░░░░░░░░░░░   10.12 %
-
-OS:
-Windows                  31 hrs 12 mins   █████████████████████████   100.00 %
 ```
 
-*Last updated: 23/08/2026 00:00 UTC — auto-updated daily via waka-stats*
+*Last updated: 23/08/2026 19:19:13 UTC*
+
 <!--END_SECTION:waka-->
