@@ -1,79 +1,82 @@
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:00F1FF,100:7B2FFF&height=150&section=header&text=&fontSize=0" />
+<div align="center">
 
-<h1 align="center">Hey, I'm 0nsku 👋</h1>
-<h3 align="center">Full-Stack Developer • Discord Bot Maker • TypeScript Tinkerer ⚡</h3>
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=1e1e1e&height=120&section=header&text=0nsku&fontSize=42&fontColor=888888&fontAlignY=65&animation=fadeIn" />
+</div>
+
+  ![Profile Views](https://komarev.com/ghpvc/?username=0nsku&color=444444&style=flat-square)
+  <img src="https://img.shields.io/github/last-commit/0nsku/0nsku?label=Last%20Update&color=1e1e1e&style=flat-square&labelColor=1e1e1e" alt="Last Update" />
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=800&color=00F1FF&center=true&vCenter=true&width=650&lines=Self-taught+Developer;Full+Stack+Engineer+%7C+Frontend+%2B+Backend;Discord+Bot+Maker;TypeScript+%7C+Python+%7C+Rust+%7C+Go;FastAPI+%26+Next.js+Enthusiast;Code.+Chill.+Repeat+🧘‍♂️" alt="Typing Animation" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=3000&pause=800&color=888888&center=true&vCenter=true&width=600&lines=Full+Stack+Developer;Discord+Bot+Maker;TypeScript+%7C+Python+%7C+Rust+%7C+Go;Code.+Chill.+Repeat" alt="Typing" />
 </p>
 
-<p align="center">
-  <a href="https://github.com/0nsku"><img src="https://komarev.com/ghpvc/?username=0nsku&label=Profile%20Views&color=00F1FF&style=flat-square" alt="Profile Views" /></a>
-  <img src="https://img.shields.io/github/last-commit/0nsku/0nsku?label=Last%20Update&color=00F1FF&style=flat-square" alt="Last Commit" />
-</p>
+</div>
 
 ---
 
-### 👨‍💻 About Me
+## Tech Stack
 
-```ts
-const onsku = {
-  role: "Full-Stack Developer",
-  focus: ["Web Apps", "Discord Bots", "APIs"],
-  stack: ["TypeScript", "Python", "Rust", "Go"],
-  currentFocus: "Building Discord bots & modern web experiences",
-  motto: "Code. Chill. Conquer. 🧘‍♂️",
-  funFact: "Eyes sharp, code sharper — Gojo, probably."
-}
+<div align="center">
+
+<!-- Frontend -->
+<img src="https://img.shields.io/badge/Next.js-1e1e1e?style=flat-square&logo=nextdotjs&logoColor=aaaaaa" />
+<img src="https://img.shields.io/badge/React-1e1e1e?style=flat-square&logo=react&logoColor=aaaaaa" />
+<img src="https://img.shields.io/badge/Tailwind-1e1e1e?style=flat-square&logo=tailwindcss&logoColor=aaaaaa" />
+<img src="https://img.shields.io/badge/TypeScript-1e1e1e?style=flat-square&logo=typescript&logoColor=aaaaaa" />
+<img src="https://img.shields.io/badge/JavaScript-1e1e1e?style=flat-square&logo=javascript&logoColor=aaaaaa" />
+<img src="https://img.shields.io/badge/Vite-1e1e1e?style=flat-square&logo=vite&logoColor=aaaaaa" />
+
+<!-- Backend -->
+<img src="https://img.shields.io/badge/Python-1e1e1e?style=flat-square&logo=python&logoColor=aaaaaa" />
+<img src="https://img.shields.io/badge/FastAPI-1e1e1e?style=flat-square&logo=fastapi&logoColor=aaaaaa" />
+<img src="https://img.shields.io/badge/Go-1e1e1e?style=flat-square&logo=go&logoColor=aaaaaa" />
+<img src="https://img.shields.io/badge/Rust-1e1e1e?style=flat-square&logo=rust&logoColor=aaaaaa" />
+<img src="https://img.shields.io/badge/Node.js-1e1e1e?style=flat-square&logo=nodedotjs&logoColor=aaaaaa" />
+
+<!-- Database -->
+<img src="https://img.shields.io/badge/PostgreSQL-1e1e1e?style=flat-square&logo=postgresql&logoColor=aaaaaa" />
+<img src="https://img.shields.io/badge/MySQL-1e1e1e?style=flat-square&logo=mysql&logoColor=aaaaaa" />
+<img src="https://img.shields.io/badge/MariaDB-1e1e1e?style=flat-square&logo=mariadb&logoColor=aaaaaa" />
+<img src="https://img.shields.io/badge/Supabase-1e1e1e?style=flat-square&logo=supabase&logoColor=aaaaaa" />
+<img src="https://img.shields.io/badge/Redis-1e1e1e?style=flat-square&logo=redis&logoColor=aaaaaa" />
+
+<!-- Tools -->
+<img src="https://img.shields.io/badge/Docker-1e1e1e?style=flat-square&logo=docker&logoColor=aaaaaa" />
+<img src="https://img.shields.io/badge/Kubernetes-1e1e1e?style=flat-square&logo=kubernetes&logoColor=aaaaaa" />
+<img src="https://img.shields.io/badge/Git-1e1e1e?style=flat-square&logo=git&logoColor=aaaaaa" />
+<img src="https://img.shields.io/badge/GitHub-1e1e1e?style=flat-square&logo=github&logoColor=aaaaaa" />
+<img src="https://img.shields.io/badge/Vercel-1e1e1e?style=flat-square&logo=vercel&logoColor=aaaaaa" />
+<img src="https://img.shields.io/badge/Cloudflare-1e1e1e?style=flat-square&logo=cloudflare&logoColor=aaaaaa" />
+<img src="https://img.shields.io/badge/AWS-1e1e1e?style=flat-square&logo=amazonaws&logoColor=aaaaaa" />
+
+</div>
+
+---
+<!--START_SECTION:waka-->
+```text
+GitHub:
+Contributions 2025       2277
+Current streak           12 days
+Longest streak           63 days
+Public repos             1
+Private repos            24
+
+Total this week   31 hrs 12 mins
+
+Languages:
+TypeScript               18 hrs 42 mins   ██████████████░░░░░░░░░░░   59.90 %
+Python                   6 hrs 14 mins    █████░░░░░░░░░░░░░░░░░░░░   19.97 %
+Rust                     2 hrs 08 mins    █░░░░░░░░░░░░░░░░░░░░░░░░   6.84 %
+Go                       1 hrs 45 mins    ░░░░░░░░░░░░░░░░░░░░░░░░░   5.61 %
+
+Editors:
+Visual Studio Code       28 hrs 03 mins   ████████████████████░░░░░   89.88 %
+Cursor                   3 hrs 09 mins    ██░░░░░░░░░░░░░░░░░░░░░░░   10.12 %
+
+OS:
+Windows                  31 hrs 12 mins   █████████████████████████   100.00 %
 ```
 
----
-
-### 🧰 Tech Stack
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=nextjs,react,tailwind,typescript,javascript,python,go,rust,vite,fastapi,zod,docker,git,github,kubernetes,aws,vercel,cloudflare,mysql,mariadb,postgres,supabase,redis,vscode&perline=10" />
-</p>
-
-<details>
-<summary><b>🔽 Full Stack Breakdown</b></summary>
-<br>
-
-**Frontend:** Next.js • React • Tailwind • TypeScript • Vite  
-**Backend:** Python • FastAPI • Go • Rust • Node.js  
-**Database:** Postgres • MySQL/MariaDB • Supabase • Redis  
-**DevOps & Tools:** Docker • Kubernetes • AWS • Vercel • Cloudflare • Git
-
-</details>
-
----
-
-### 📊 Stats — Live from GitHub API
-
-<p align="center">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=0nsku&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=00F1FF&line=7B2FFF&point=C9D1D9&area=true" alt="Activity Graph" />
-</p>
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats-anuraghazra1.vercel.app/api?username=0nsku&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F1FF&icon_color=7B2FFF&text_color=C9D1D9&include_all_commits=true&cache_seconds=1800" alt="GitHub Stats" />
-  <img height="165" src="https://github-readme-stats-anuraghazra1.vercel.app/api/top-langs/?username=0nsku&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F1FF&text_color=C9D1D9&langs_count=8&hide=jupyter%20notebook" alt="Top Languages" />
-</p>
-
-> **Why stats show `0`?** `api.github.com/users/0nsku` → `public_repos: 1` (only `0nsku/0nsku` is public). Stars/commits/PRs count **public only**. Your `2277 contributions` are private. To count private: deploy your own [github-readme-stats](https://github.com/anuraghazra/github-readme-stats#deploy-on-your-own-vercel-instance) on Vercel with a `PAT_1` token and change the domain, or make repos public. Streak card removed — it needs daily public commits, otherwise shows `Failed to retrieve contributions`.
-
----
-
-<p align="center">
-  <img src="https://media.tenor.com/p0G_bmA2fNUAAAAC/anime-eyes.gif" width="260" alt="Anime Eyes" />
-</p>
-<p align="center"><i>“Eyes sharp, code sharper.” – Gojo, probably.</i></p>
-
----
-
-<p align="center">
-  <img src="https://media.tenor.com/qC1xK3FzZswAAAAC/satoru-gojo-eyes.gif" width="200" alt="Gojo Stare" />
-</p>
-
-<p align="center"><code>🧘‍♂️ Code. Chill. Conquer.</code></p>
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:7B2FFF,100:00F1FF&height=120&section=footer" />
+*Last updated: 23/08/2026 00:00 UTC — auto-updated daily via waka-stats*
+<!--END_SECTION:waka-->
