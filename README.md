@@ -23,10 +23,10 @@ and keep improving the systems behind the scenes.
 
 <div align="center">
 
-<img src="https://skill-icons-v2.vercel.app/api/icons?i=typescript,python,javascript,rust,go,lua,html,css&theme=dark&perline=12" alt="TypeScript, Python, JavaScript, Rust, Go, Lua, HTML and CSS" />
+<img src="https://skill-icons-v2.vercel.app/api/icons?i=typescript,python,javascript,rust,go,lua,ruby,swift,php,html,css&theme=dark&perline=11" alt="TypeScript, Python, JavaScript, Rust, Go, Lua, Ruby, Swift, PHP, HTML and CSS" />
 
 <br>
-<samp>TypeScript · Python · JavaScript · Rust · Go · Lua · HTML · CSS</samp>
+<samp>TypeScript · Python · JavaScript · Rust · Go · Lua · Ruby · Swift · PHP · HTML · CSS</samp>
 
 </div>
 
@@ -34,10 +34,10 @@ and keep improving the systems behind the scenes.
 
 <div align="center">
 
-<img src="https://skill-icons-v2.vercel.app/api/icons?i=react,nextjs,nodejs,fastapi,tailwind,vite,bun,discord,prisma&theme=dark&perline=12" alt="React, Next.js, Node.js, FastAPI, Tailwind CSS, Vite, Bun, Discord and Prisma" />
+<img src="https://skill-icons-v2.vercel.app/api/icons?i=react,nextjs,nodejs,fastapi,flutter,astro,tailwind,vite,webpack,bun,discord,prisma&theme=dark&perline=12" alt="React, Next.js, Node.js, FastAPI, Flutter, Astro, Tailwind CSS, Vite, Webpack, Bun, Discord and Prisma" />
 
 <br>
-<samp>React · Next.js · Node.js · FastAPI · Tailwind · Vite · Bun · Discord.js · Prisma</samp>
+<samp>React · Next.js · Node.js · FastAPI · Flutter · Astro · Tailwind · Vite · Webpack · Bun · Discord.js · Prisma</samp>
 
 </div>
 
@@ -45,10 +45,10 @@ and keep improving the systems behind the scenes.
 
 <div align="center">
 
-<img src="https://skill-icons-v2.vercel.app/api/icons?i=vscode,chatgpt,aftereffects,photoshop,illustrator,blender,git,github,docker,postgresql,redis,vercel,cloudflare&theme=dark&perline=13" alt="Visual Studio Code, Codex, After Effects, Photoshop, Illustrator, Blender, Git, GitHub, Docker, PostgreSQL, Redis, Vercel and Cloudflare" />
+<img src="https://skill-icons-v2.vercel.app/api/icons?i=vscode,chatgpt,aftereffects,photoshop,illustrator,blender,git,github,docker,postgresql,redis,vercel,cloudflare,aws&theme=dark&perline=10" alt="Visual Studio Code, Codex, After Effects, Photoshop, Illustrator, Blender, Git, GitHub, Docker, PostgreSQL, Redis, Vercel, Cloudflare and AWS" />
 
 <br>
-<samp>VS Code · Codex · After Effects · Photoshop · Illustrator · Blender · Git · GitHub · Docker · PostgreSQL · Redis · Vercel · Cloudflare</samp>
+<samp>VS Code · Codex · After Effects · Photoshop · Illustrator · Blender · Git · GitHub · Docker · PostgreSQL · Redis · Vercel · Cloudflare · AWS</samp>
 
 <br><br>
 <img src="https://img.shields.io/badge/Cursor-17111f?style=flat-square&logo=cursor&logoColor=a78bfa" alt="Cursor" />
