@@ -45,10 +45,10 @@ and keep improving the systems behind the scenes.
 
 <div align="center">
 
-<img src="https://skill-icons-v2.vercel.app/api/icons?i=vscode,chatgpt,aftereffects,photoshop,illustrator,blender,git,github,docker,postgresql,redis,vercel,cloudflare,aws&theme=dark&perline=10" alt="Visual Studio Code, Codex, After Effects, Photoshop, Illustrator, Blender, Git, GitHub, Docker, PostgreSQL, Redis, Vercel, Cloudflare and AWS" />
+<img src="https://skill-icons-v2.vercel.app/api/icons?i=vscode,chatgpt,aftereffects,photoshop,illustrator,blender,git,github,zsh,docker,postgresql,redis,vercel,cloudflare,aws&theme=dark&perline=10" alt="Visual Studio Code, Codex, After Effects, Photoshop, Illustrator, Blender, Git, GitHub, Zsh, Docker, PostgreSQL, Redis, Vercel, Cloudflare and AWS" />
 
 <br>
-<samp>VS Code · Codex · After Effects · Photoshop · Illustrator · Blender · Git · GitHub · Docker · PostgreSQL · Redis · Vercel · Cloudflare · AWS</samp>
+<samp>VS Code · Codex · After Effects · Photoshop · Illustrator · Blender · Git · GitHub · Zsh · Docker · PostgreSQL · Redis · Vercel · Cloudflare · AWS</samp>
 
 <br><br>
 <img src="https://img.shields.io/badge/Cursor-17111f?style=flat-square&logo=cursor&logoColor=a78bfa" alt="Cursor" />
