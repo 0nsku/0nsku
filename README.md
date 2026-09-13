@@ -48,11 +48,12 @@ and keep improving the systems behind the scenes.
 <img src="https://skill-icons-v2.vercel.app/api/icons?i=vscode,chatgpt,aftereffects,photoshop,illustrator,blender,git,github,docker,postgresql,redis,vercel,cloudflare,aws&theme=dark&perline=10" alt="Visual Studio Code, Codex, After Effects, Photoshop, Illustrator, Blender, Git, GitHub, Docker, PostgreSQL, Redis, Vercel, Cloudflare and AWS" />
 
 <br>
-<samp>VS Code · Codex · After Effects · Photoshop · Illustrator · Blender · Git · GitHub · Zsh · Docker · PostgreSQL · Redis · Vercel · Cloudflare · AWS</samp>
+<br>
+<img src="https://go-skill-icons.vercel.app/api/icons?i=cursor" width="48" height="48" alt="Cursor" />
+<img src="./zsh.svg" width="48" height="48" alt="Zsh" />
 
-<br><br>
-<img src="https://img.shields.io/badge/Cursor-17111f?style=flat-square&logo=cursor&logoColor=a78bfa" alt="Cursor" />
-<img src="https://img.shields.io/badge/Zsh-17111f?style=flat-square&logo=zsh&logoColor=a78bfa" alt="Zsh" />
+<br>
+<samp>VS Code · Cursor · Codex · After Effects · Photoshop · Illustrator · Blender · Git · GitHub · Zsh · Docker · PostgreSQL · Redis · Vercel · Cloudflare · AWS</samp>
 
 </div>
 
