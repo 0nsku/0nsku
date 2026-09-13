@@ -22,11 +22,14 @@ Env vars:
   OUT_DIR       where to write the SVGs (default: repo root)
 """
 import base64
+import collections
+import concurrent.futures
 import functools
 import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import date, datetime, timedelta, timezone
@@ -42,6 +45,7 @@ API = "https://api.github.com/graphql"
 #    compared with the signed-in GitHub profile.
 QUERY = """
 query($login: String!, $from: DateTime!, $to: DateTime!) {
+  viewer { login }
   user(login: $login) {
     contributionsCollection(from: $from, to: $to) {
       contributionCalendar {
@@ -56,6 +60,10 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
           edges { size node { name } }
         }
       }
+    }
+    privateRepositories: repositories(first: 1, ownerAffiliations: OWNER,
+                                      isFork: false, privacy: PRIVATE) {
+      totalCount
     }
   }
 }
@@ -127,9 +135,12 @@ def fetch(login, token):
         payload = json.load(r)
     if "errors" in payload:
         raise SystemExit(f"GraphQL errors: {payload['errors']}")
-    user = (payload.get("data") or {}).get("user")
+    data = payload.get("data") or {}
+    user = data.get("user")
     if not user:
         raise SystemExit(f"no such user: {login}")
+    user["_viewerLogin"] = (data.get("viewer") or {}).get("login")
+    user["_privateRepoCount"] = (user.get("privateRepositories") or {}).get("totalCount", 0)
     return user
 
 
@@ -234,49 +245,129 @@ def summarise(user):
         by_size=by_size, by_repo=by_repo)
 
 
-def waka_fallback(readme_path):
-    """Parse the private-aware WakaTime block already maintained in README."""
-    try:
-        with open(readme_path, encoding="utf-8") as f:
-            text = f.read()
-    except OSError:
-        return None
-    block_match = re.search(
-        r"<!--START_SECTION:waka-->(.*?)<!--END_SECTION:waka-->",
-        text, re.S)
-    if not block_match:
-        return None
-    block = block_match.group(1)
+def rest_json(url, token):
+    req = urllib.request.Request(url, headers={
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "0nsku-profile-stats",
+        "X-GitHub-Api-Version": "2022-11-28",
+    })
+    with urllib.request.urlopen(req, timeout=30) as response:
+        return json.load(response)
 
-    def number(pattern, default=0):
-        match = re.search(pattern, block, re.M)
-        return int(match.group(1)) if match else default
 
-    total = number(r"^Contributions\s+\d{4}\s+(\d+)\s*$")
-    if not total:
-        return None
-    current = number(r"^Current streak\s+(\d+)\s+days\s*$")
-    longest = number(r"^Longest streak\s+(\d+)\s+days\s*$")
-    public_repos = number(r"^Public repos\s+(\d+)\s*$")
-    private_repos = number(r"^Private repos\s+(\d+)\s*$")
+def private_activity(login, token):
+    """Build a private-aware calendar directly from owned repositories.
 
-    language_block = re.search(r"Languages:\s*\n(.*?)\n\s*Editors:", block, re.S)
-    langs = []
-    if language_block:
-        for line in language_block.group(1).splitlines():
-            match = re.match(r"^([A-Za-z][A-Za-z0-9.+# -]*?)\s+([\d.]+)%", line)
-            if match:
-                langs.append((match.group(1).strip(), int(float(match.group(2)) * 100)))
+    GitHub's contributionCalendar can be empty when private activity sharing is
+    disabled. An owner token can still read the underlying default-branch
+    commits, so this reconstructs the chart directly from GitHub.
+    """
+    repos = []
+    page = 1
+    while True:
+        batch = rest_json(
+            "https://api.github.com/user/repos?affiliation=owner&sort=updated"
+            f"&per_page=100&page={page}", token)
+        repos.extend(repo for repo in batch if not repo.get("fork"))
+        if len(batch) < 100:
+            break
+        page += 1
+
+    today = datetime.now(timezone.utc).date()
+    start = today - timedelta(days=364)
+
+    def scan(repo):
+        full_name = repo["full_name"]
+        encoded = urllib.parse.quote(full_name, safe="/")
+        lang_bytes = collections.Counter()
+        try:
+            lang_bytes.update(rest_json(
+                f"https://api.github.com/repos/{encoded}/languages", token))
+        except urllib.error.HTTPError as exc:
+            if exc.code not in (404, 409):
+                raise
+
+        commits = collections.Counter()
+        page_number = 1
+        while True:
+            params = urllib.parse.urlencode({
+                "author": login,
+                "sha": repo.get("default_branch") or "HEAD",
+                "since": f"{start.isoformat()}T00:00:00Z",
+                "until": f"{today.isoformat()}T23:59:59Z",
+                "per_page": 100,
+                "page": page_number,
+            })
+            try:
+                batch = rest_json(
+                    f"https://api.github.com/repos/{encoded}/commits?{params}", token)
+            except urllib.error.HTTPError as exc:
+                if exc.code in (404, 409):
+                    break
+                raise
+            for item in batch:
+                stamp = item["commit"]["author"]["date"][:10]
+                commits[stamp] += 1
+            if len(batch) < 100:
+                break
+            page_number += 1
+        return lang_bytes, repo.get("language"), commits
+
+    by_size = collections.Counter()
+    by_repo = collections.Counter()
+    counts = collections.Counter()
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+        for lang_bytes, main_language, commits in pool.map(scan, repos):
+            by_size.update(lang_bytes)
+            counts.update(commits)
+            if main_language:
+                by_repo[main_language] += 1
+
+    weeks = []
+    week = []
+    cursor = start
+    while cursor <= today:
+        weekday = (cursor.weekday() + 1) % 7
+        if weekday == 0 and week:
+            weeks.append(week)
+            week = []
+        week.append({
+            "contributionCount": counts[cursor.isoformat()],
+            "date": cursor.isoformat(),
+            "weekday": weekday,
+        })
+        cursor += timedelta(days=1)
+    if week:
+        weeks.append(week)
+
+    days = [day for group in weeks for day in group]
+    weekly = [sum(day["contributionCount"] for day in group) for group in weeks]
+    current, longest = streaks(days)
+
+    def rank(counter):
+        return sorted(counter.items(), key=lambda item: (-item[1], item[0]))[:5]
 
     return dict(
-        source="waka",
-        total=total,
-        active=private_repos,
-        best_week=public_repos,
-        weekly=[], weeks=[],
-        current=dict(length=current, start=None, end=None),
-        longest=dict(length=longest, start=None, end=None),
-        by_size=langs[:5], by_repo=[])
+        source="github-private",
+        total=sum(counts.values()),
+        active=sum(1 for day in days if day["contributionCount"] > 0),
+        best_week=max(weekly) if weekly else 0,
+        weekly=weekly,
+        weeks=weeks,
+        current=current,
+        longest=longest,
+        by_size=rank(by_size),
+        by_repo=rank(by_repo),
+    )
+
+
+def cached_activity(path):
+    try:
+        with open(path, encoding="utf-8") as cache_file:
+            return json.load(cache_file)
+    except (OSError, json.JSONDecodeError):
+        return None
 
 
 # ---------------------------------------------------------------- drawing
@@ -342,23 +433,14 @@ def draw_stats(s):
     p = [head(WIDTH, H)]
     p.append(f'<g opacity="0">{fade(0.10)}'
              + label(0, 50, s["total"], 52, "e-f", extra=' font-weight="600"')
-             + label(0, 72, ("contributions this year" if s.get("source") == "waka"
-                              else "contributions in the last year"), 12) + '</g>')
-    secondary = ([(s["active"], "private repos"),
-                  (s["best_week"], "public repos")]
-                 if s.get("source") == "waka" else
-                 [(s["active"], "active days"), (s["best_week"], "best week")])
+             + label(0, 72, "commits in the last year", 12) + '</g>')
+    secondary = [(s["active"], "active days"),
+                 (s["best_week"], "best week")]
     for i, (val, lab) in enumerate(secondary):
         p.append(f'<g opacity="0">{fade(0.30 + i * 0.12)}'
                  + label(WIDTH, 30 + i * 40, val, 19, "e-f", "end",
                          ' font-weight="600"')
                  + label(WIDTH, 47 + i * 40, lab, 11, "m-f", "end") + '</g>')
-
-    if s.get("source") == "waka":
-        p.append(f'<g opacity="0">{fade(0.55)}'
-                 + label(0, H - 12, "private-aware activity via WakaTime", 10)
-                 + '</g></svg>')
-        return "".join(p)
 
     base, top = H - 10, H - 58
     span = base - top
@@ -391,7 +473,7 @@ def draw_streak(s):
         r    = s[k]
         span = (f"{pretty(r['start'])} &#8211; {pretty(r['end'])}"
                 if r["length"] and r.get("start") and r.get("end")
-                else ("private-aware total" if r["length"] else "&#8212;"))
+                else "&#8212;")
         cells.append((r["length"], lab, span))
 
     p   = [head(WIDTH, H)]
@@ -416,8 +498,7 @@ def draw_langs(s):
     name_w, bar_max = 82, colw - 82 - 44
 
     p      = [head(WIDTH, H)]
-    groups = [(LEFT, ("by activity" if s.get("source") == "waka" else "by bytes"),
-               s["by_size"], True),
+    groups = [(LEFT, "by bytes", s["by_size"], True),
               (LEFT + colw + 30, "by repos", s["by_repo"], False)]
     for gi, (gx, title, data, as_pct) in enumerate(groups):
         p.append(f'<g opacity="0">{fade(0.10 + gi * 0.10)}'
@@ -433,9 +514,7 @@ def draw_langs(s):
         p.append(clip)
         for ri, (name, val) in enumerate(data):
             y     = 26 + ri * 22
-            shown = ((f"{val / 100:.1f}%" if s.get("source") == "waka"
-                      else f"{val / total * 100:.0f}%")
-                     if as_pct else f"{val}")
+            shown = (f"{val / total * 100:.0f}%" if as_pct else f"{val}")
             p.append(f'<g opacity="0">{fade(0.24 + gi * 0.10 + ri * 0.05)}'
                      + label(gx, y + 8, name.lower()[:11], 11, "e-f")
                      + label(gx + colw - 6, y + 8, shown, 11, "m-f", "end")
@@ -569,34 +648,38 @@ def main():
     login   = os.environ.get("GH_LOGIN", "0nsku")
     out_dir = os.environ.get("OUT_DIR", ".")
 
-    s = summarise(fetch(login, token))
+    user = fetch(login, token)
+    s = summarise(user)
+    cache_path = os.path.join(out_dir, "profile-data.json")
     if not s["total"]:
-        fallback = waka_fallback(os.path.join(out_dir, "README.md"))
-        if fallback:
-            s = fallback
+        if (user.get("_viewerLogin") or "").lower() == login.lower() and user.get("_privateRepoCount"):
+            print(f"scanning {user['_privateRepoCount']} private repositories...")
+            s = private_activity(login, token)
+        else:
+            fallback = cached_activity(cache_path)
+            if fallback:
+                s = fallback
     files = {
         "stats.svg":  draw_stats(s),
         "streak.svg": draw_streak(s),
         "langs.svg":  draw_langs(s),
         "year.svg":   draw_year(s),
     }
-    for word in ("about", "stack", "stats", "coding activity", "visitors",
-                 "about this page"):
+    for word in ("about", "stack", "tools", "stats", "visitors"):
         files[f"hd-{word.replace(' ', '-')}.svg"] = draw_heading(word)
 
     changed = [n for n, svg in files.items()
                if write(os.path.join(out_dir, n), svg)]
+    if s.get("source") == "github-private":
+        cache = json.dumps(s, indent=2, sort_keys=True) + "\n"
+        if write(cache_path, cache):
+            changed.append("profile-data.json")
     view_count, view_svg = fetch_views(login)
     if write_bytes(os.path.join(out_dir, "views.svg"), view_svg):
         changed.append("views.svg")
-    if s.get("source") == "waka":
-        print(f"{s['total']} contributions, {s['active']} private repos, "
-              f"{s['best_week']} public repos, current streak "
-              f"{s['current']['length']}, longest {s['longest']['length']}")
-    else:
-        print(f"{s['total']} contributions, {s['active']} active days, "
-              f"best week {s['best_week']}, current streak "
-              f"{s['current']['length']}, longest {s['longest']['length']}")
+    print(f"{s['total']} commits, {s['active']} active days, "
+          f"best week {s['best_week']}, current streak "
+          f"{s['current']['length']}, longest {s['longest']['length']}")
     print("languages by bytes: "
           + ", ".join(f"{n} {v}" for n, v in s["by_size"]))
     print(f"preserved profile views: {view_count}")

@@ -30,7 +30,7 @@ jobs:
 
       - name: Generate SVG graphics
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
           GH_LOGIN: ${{ github.repository_owner }}
         run: python3 scripts/generate_stats.py
 
@@ -43,6 +43,6 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add stats.svg streak.svg langs.svg year.svg views.svg hd-*.svg
+          git add stats.svg streak.svg langs.svg year.svg views.svg profile-data.json hd-*.svg
           git commit -m "chore: refresh profile graphics"
           git push

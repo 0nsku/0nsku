@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="./onsku.png" width="260" alt="0NSKU" />
+<img src="./ascii.svg" width="460" alt="ASCII portrait of 0nsku" />
 
-<img src="./stats.svg" width="620" alt="GitHub contributions in the last year" />
+<img src="./stats.svg" width="620" alt="GitHub commits and weekly activity chart" />
 
 <samp>self-taught developer · full stack · bots & automation</samp>
 
-<!-- Keep the original Komarev identity alive so the accumulated total is never reset. -->
+<!-- Preserve the original Komarev counter identity. -->
 <img src="https://komarev.com/ghpvc/?username=0nsku&style=pixel" width="1" height="1" alt="" />
 
 </div>
@@ -16,68 +16,62 @@
 > Self-taught developer focused on turning useful ideas into working software.
 
 I build full-stack products, Discord bots, backend services, and automation.<br>
-Most of my work currently lives in private repositories, where I experiment,<br>
-ship quickly, and keep improving the systems behind the scenes.
+Most of my work lives in private repositories, where I experiment, ship quickly,<br>
+and keep improving the systems behind the scenes.
 
 <img src="./hd-stack.svg" width="620" alt="stack" />
 
-<samp>typescript &nbsp; python &nbsp; javascript &nbsp; react &nbsp; next.js &nbsp; node.js &nbsp; fastapi &nbsp; rust &nbsp; go &nbsp; postgresql &nbsp; redis &nbsp; docker &nbsp; git</samp>
+<div align="center">
+
+<img src="https://img.shields.io/badge/TypeScript-17111f?style=flat-square&logo=typescript&logoColor=a78bfa" alt="TypeScript" />
+<img src="https://img.shields.io/badge/Python-17111f?style=flat-square&logo=python&logoColor=a78bfa" alt="Python" />
+<img src="https://img.shields.io/badge/JavaScript-17111f?style=flat-square&logo=javascript&logoColor=a78bfa" alt="JavaScript" />
+<img src="https://img.shields.io/badge/React-17111f?style=flat-square&logo=react&logoColor=a78bfa" alt="React" />
+<img src="https://img.shields.io/badge/Next.js-17111f?style=flat-square&logo=nextdotjs&logoColor=a78bfa" alt="Next.js" />
+<img src="https://img.shields.io/badge/Node.js-17111f?style=flat-square&logo=nodedotjs&logoColor=a78bfa" alt="Node.js" />
+<img src="https://img.shields.io/badge/FastAPI-17111f?style=flat-square&logo=fastapi&logoColor=a78bfa" alt="FastAPI" />
+<img src="https://img.shields.io/badge/Rust-17111f?style=flat-square&logo=rust&logoColor=a78bfa" alt="Rust" />
+<img src="https://img.shields.io/badge/Go-17111f?style=flat-square&logo=go&logoColor=a78bfa" alt="Go" />
+<img src="https://img.shields.io/badge/PostgreSQL-17111f?style=flat-square&logo=postgresql&logoColor=a78bfa" alt="PostgreSQL" />
+<img src="https://img.shields.io/badge/Redis-17111f?style=flat-square&logo=redis&logoColor=a78bfa" alt="Redis" />
+<img src="https://img.shields.io/badge/Docker-17111f?style=flat-square&logo=docker&logoColor=a78bfa" alt="Docker" />
+
+</div>
+
+<img src="./hd-tools.svg" width="620" alt="tools" />
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/VS_Code-17111f?style=flat-square&logo=visualstudiocode&logoColor=a78bfa" alt="Visual Studio Code" />
+<img src="https://img.shields.io/badge/Cursor-17111f?style=flat-square&logo=cursor&logoColor=a78bfa" alt="Cursor" />
+<img src="https://img.shields.io/badge/Codex-17111f?style=flat-square&logo=openai&logoColor=a78bfa" alt="Codex" />
+<img src="https://img.shields.io/badge/After_Effects-17111f?style=flat-square&logo=adobeaftereffects&logoColor=a78bfa" alt="Adobe After Effects" />
+<img src="https://img.shields.io/badge/Photoshop-17111f?style=flat-square&logo=adobephotoshop&logoColor=a78bfa" alt="Adobe Photoshop" />
+<img src="https://img.shields.io/badge/Illustrator-17111f?style=flat-square&logo=adobeillustrator&logoColor=a78bfa" alt="Adobe Illustrator" />
+<img src="https://img.shields.io/badge/Blender-17111f?style=flat-square&logo=blender&logoColor=a78bfa" alt="Blender" />
+<img src="https://img.shields.io/badge/Git-17111f?style=flat-square&logo=git&logoColor=a78bfa" alt="Git" />
+<img src="https://img.shields.io/badge/GitHub-17111f?style=flat-square&logo=github&logoColor=a78bfa" alt="GitHub" />
+<img src="https://img.shields.io/badge/Vercel-17111f?style=flat-square&logo=vercel&logoColor=a78bfa" alt="Vercel" />
+<img src="https://img.shields.io/badge/Cloudflare-17111f?style=flat-square&logo=cloudflare&logoColor=a78bfa" alt="Cloudflare" />
+
+</div>
 
 <img src="./hd-stats.svg" width="620" alt="stats" />
 
 <div align="center">
 
-<img src="./streak.svg" width="620" alt="Current and longest contribution streak" />
+<img src="./streak.svg" width="620" alt="Current and longest coding streak" />
 
-<img src="./langs.svg" width="620" alt="Top public repository languages" />
+<img src="./langs.svg" width="620" alt="Top languages by bytes and repository count" />
+
+<img src="./year.svg" width="620" alt="ASCII contribution chart for the last year" />
 
 </div>
-
-<img src="./hd-coding-activity.svg" width="620" alt="coding activity" />
-
-<!--START_SECTION:waka-->
-```text
-GitHub:
-Contributions 2026       4807
-Current streak           0 days
-Longest streak           69 days
-Public repos             1
-Private repos            104
-
-
-Total this week   0 secs
-Languages:
-Python               61.5%        ███████████████░░░░░░░░░░   61.49 %
-TypeScript           25.9%        ██████░░░░░░░░░░░░░░░░░░░   25.90 %
-CSS                  5.1%         █░░░░░░░░░░░░░░░░░░░░░░░░   5.13 %
-JavaScript           2.8%         ░░░░░░░░░░░░░░░░░░░░░░░░░   2.76 %
-Lua                  1.6%         ░░░░░░░░░░░░░░░░░░░░░░░░░   1.56 %
-
-Editors:
-Visual Studio Code   15 hrs 57 mins ████████████████████░░░░░   80.84 %
-Cursor               3 hrs 46 mins ████░░░░░░░░░░░░░░░░░░░░░   19.11 %
-OS:
-Windows              19 hrs 38 mins █████████████████████████   100.00 %
-```
-
-*Last updated: 12/09/2026 03:58:37 UTC*
-
-<!--END_SECTION:waka-->
 
 <img src="./hd-visitors.svg" width="620" alt="visitors" />
 
 <div align="center">
 
-<img src="./views.svg" width="420" alt="Profile views: preserved from the original counter" />
+<img src="./views.svg" width="420" alt="Anime character profile view counter" />
 
 </div>
-
-<img src="./hd-about-this-page.svg" width="620" alt="about this page" />
-
-The GitHub graphics on this page are generated by [this repository](.github/workflows/stats.yml)<br>
-every 30 minutes and committed only when something changes. The visitor graphic keeps<br>
-the original Komarev counter identity, preserving the existing total, then renders<br>
-that number as Naruto-themed character digits.
-
-The coding-time section remains connected to the existing WakaTime updater, so<br>
-private language, editor, and operating-system activity can continue to sync.
