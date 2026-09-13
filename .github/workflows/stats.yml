@@ -8,7 +8,9 @@ on:
       - "scripts/**"
       - ".github/workflows/stats.yml"
   schedule:
-    - cron: "17 2 * * *"
+    # Keep the locally saved anime view graphic reasonably fresh without
+    # creating a commit for every profile load.
+    - cron: "*/30 * * * *"
 
 permissions:
   contents: write
