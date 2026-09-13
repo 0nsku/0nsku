@@ -25,6 +25,7 @@ import base64
 import collections
 import concurrent.futures
 import functools
+import html
 import json
 import os
 import re
@@ -411,7 +412,7 @@ def wipe(cid, x, y, w, h, delay, dur=REVEAL):
 def label(x, y, text, size=11, cls="m-f", anchor="start", extra=""):
     a = f' text-anchor="{anchor}"' if anchor != "start" else ""
     return (f'<text x="{x}" y="{y}" class="{cls}" font-size="{size}"{a}'
-            f'{extra}>{text}</text>')
+            f'{extra}>{html.escape(str(text))}</text>')
 
 
 def hbar(x, y, w, h, cls="d-f", r=3.0):
@@ -665,8 +666,15 @@ def main():
         "langs.svg":  draw_langs(s),
         "year.svg":   draw_year(s),
     }
-    for word in ("about", "stack", "tools", "stats", "visitors"):
-        files[f"hd-{word.replace(' ', '-')}.svg"] = draw_heading(word)
+    for slug, label in (
+        ("about", "about"),
+        ("languages", "languages"),
+        ("frameworks-libraries", "frameworks & libraries"),
+        ("tools-platforms", "tools & platforms"),
+        ("stats", "stats"),
+        ("visitors", "visitors"),
+    ):
+        files[f"hd-{slug}.svg"] = draw_heading(label)
 
     changed = [n for n, svg in files.items()
                if write(os.path.join(out_dir, n), svg)]
