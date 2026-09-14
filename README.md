@@ -45,7 +45,7 @@ and keep improving the systems behind the scenes.
 
 <div align="center">
 
-<img src="https://skill-icons-v2.vercel.app/api/icons?i=vscode,chatgpt,aftereffects,photoshop,illustrator,blender,git,github,docker,postgresql,redis,vercel,cloudflare,aws&theme=dark&perline=10" alt="Visual Studio Code, Codex, After Effects, Photoshop, Illustrator, Blender, Git, GitHub, Docker, PostgreSQL, Redis, Vercel, Cloudflare and AWS" />
+<img src="https://skill-icons-v2.vercel.app/api/icons?i=chatgpt,aftereffects,photoshop,illustrator,blender,git,github,docker,postgresql,redis,vercel,cloudflare,aws&theme=dark&perline=10" alt="Codex, After Effects, Photoshop, Illustrator, Blender, Git, GitHub, Docker, PostgreSQL, Redis, Vercel, Cloudflare and AWS" />
 
 <br>
 <br>
@@ -53,7 +53,7 @@ and keep improving the systems behind the scenes.
 <img src="./zsh.svg" width="48" height="48" alt="Zsh" />
 
 <br>
-<samp>VS Code · Cursor · Codex · After Effects · Photoshop · Illustrator · Blender · Git · GitHub · Zsh · Docker · PostgreSQL · Redis · Vercel · Cloudflare · AWS</samp>
+<samp>Cursor · Codex · After Effects · Photoshop · Illustrator · Blender · Git · GitHub · Zsh · Docker · PostgreSQL · Redis · Vercel · Cloudflare · AWS</samp>
 
 </div>
 
@@ -76,34 +76,3 @@ and keep improving the systems behind the scenes.
 <img src="./views.svg" width="420" alt="Anime character profile view counter" />
 
 </div>
-
-<!--START_SECTION:waka-->
-```text
-GitHub:
-Contributions 2026       4837
-Current streak           0 days
-Longest streak           69 days
-Public repos             1
-Private repos            104
-
-
-Total this week   0 secs
-
-Languages:
-Python               61.4%        ███████████████░░░░░░░░░░   61.36 %
-TypeScript           26.1%        ██████░░░░░░░░░░░░░░░░░░░   26.05 %
-CSS                  5.1%         █░░░░░░░░░░░░░░░░░░░░░░░░   5.13 %
-JavaScript           2.7%         ░░░░░░░░░░░░░░░░░░░░░░░░░   2.75 %
-Lua                  1.6%         ░░░░░░░░░░░░░░░░░░░░░░░░░   1.55 %
-
-Editors:
-Visual Studio Code   15 hrs 57 mins ████████████████████░░░░░   80.84 %
-Cursor               3 hrs 46 mins ████░░░░░░░░░░░░░░░░░░░░░   19.11 %
-
-OS:
-Windows              19 hrs 38 mins █████████████████████████   100.00 %
-```
-
-*Last updated: 14/09/2026 04:15:50 UTC*
-
-<!--END_SECTION:waka-->

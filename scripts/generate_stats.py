@@ -642,6 +642,25 @@ def write_bytes(path, content):
     return True
 
 
+def remove_waka_section(path):
+    """Remove stale WakaTime output if an external updater inserts it."""
+    if not os.path.exists(path):
+        return False
+    with open(path, "r", encoding="utf-8") as f:
+        old = f.read()
+    cleaned = re.sub(
+        r"\n*<!--START_SECTION:waka-->.*?<!--END_SECTION:waka-->\.?\s*",
+        "\n",
+        old,
+        flags=re.DOTALL,
+    )
+    if cleaned == old:
+        return False
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(cleaned)
+    return True
+
+
 def main():
     token = os.environ.get("GITHUB_TOKEN")
     if not token:
@@ -685,6 +704,8 @@ def main():
     view_count, view_svg = fetch_views(login)
     if write_bytes(os.path.join(out_dir, "views.svg"), view_svg):
         changed.append("views.svg")
+    if remove_waka_section(os.path.join(out_dir, "README.md")):
+        changed.append("README.md")
     print(f"{s['total']} commits, {s['active']} active days, "
           f"best week {s['best_week']}, current streak "
           f"{s['current']['length']}, longest {s['longest']['length']}")
