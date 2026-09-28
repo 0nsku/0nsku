@@ -629,13 +629,18 @@ def draw_heading(word):
 
 
 def draw_year(s):
-    """Seven rows × fifty-three weeks, intensity encoded as a character."""
-    FS, LH, COLW = 9.2, 11.0, 2
-    CW           = FS * 0.6
+    """The year as a colored grid — one rounded cell per day, five levels."""
     pad_l, pad_t = LEFT, 44
     weeks        = s["weeks"]
-    ncols        = len(weeks) * COLW
-    H            = int(pad_t + 7 * LH + 26)
+    cell         = 9.0
+    step         = cell + 1.6
+    H            = int(pad_t + 7 * step + 28)
+
+    # five levels, quiet → loud; level 5 is the accent reserved for the
+    # single busiest day so the peak pops in a different hue
+    LEVELS_LIGHT = ["#eae5f7", "#cfc3f2", "#a78bfa", "#7c3aed", "#4c1d95"]
+    LEVELS_DARK  = ["#1a1430", "#3b2a63", "#7c3aed", "#a78bfa", "#ede9fe"]
+    ACCENT       = "#f59e0b"
 
     def level(v):
         for i, cut in enumerate((0, 2, 5, 9)):
@@ -644,6 +649,14 @@ def draw_year(s):
         return 4
 
     p = [head(WIDTH, H)]
+    p[-1] += ("<style>"
+              + "".join(f".lv{i}{{fill:{LEVELS_LIGHT[i]}}}" for i in range(5))
+              + f".acc{{fill:{ACCENT}}}"
+              + "@media(prefers-color-scheme:dark){"
+              + "".join(f".lv{i}{{fill:{LEVELS_DARK[i]}}}" for i in range(5))
+              + f".acc{{fill:{ACCENT}}}}}"
+              + "</style>")
+
     bcount, bdate = s.get("busiest_day") or (0, None)
     sub = (f"{fmt(s['total'])} contributions · {s['active']} of "
            f"{sum(len(w) for w in weeks)} days active")
@@ -655,55 +668,50 @@ def draw_year(s):
              + label(pad_l, 32, sub, 11)
              + '</g>')
 
+    # legend: less … more, real cells instead of characters
     lx = WIDTH - 6
-    p.append(f'<g opacity="0">{fade(1.30)}'
-             + label(lx - 78, 32, "less", 9, "m-f", "end")
-             + f'<text xml:space="preserve" x="{lx - 72}" y="32" class="d-f" '
-             f'font-size="{FS}">{" ".join(RAMP[1:])}</text>'
-             + label(lx, 32, "more", 9, "m-f", "end") + '</g>')
+    p.append(f'<g opacity="0">{fade(1.30)}')
+    p.append(label(lx - 84, 33, "less", 9, "m-f", "end"))
+    for i in range(5):
+        p.append(f'<rect x="{lx - 78 + i * 11:.1f}" y="25" width="{cell}" '
+                 f'height="{cell}" rx="1.5" class="lv{i}"/>')
+    p.append(label(lx - 78 + 5 * 11 + 4, 33, "more", 9, "m-f") + '</g>')
 
-    # hairline where each month starts — the map reads as month columns
-    last_m = None
+    cid = "yr"
+    grid_w = len(weeks) * step
+    p.append(f'<clipPath id="{cid}"><rect x="{pad_l}" y="{pad_t - 4}" '
+             f'height="{7 * step + 6}" width="0"><animate '
+             f'attributeName="width" from="0" to="{grid_w:.1f}" '
+             f'begin="0.30s" dur="{REVEAL}s" fill="freeze"/></rect>'
+             f'</clipPath>')
+    p.append(f'<g clip-path="url(#{cid})">')
     for i, w in enumerate(weeks):
         m = int(w[0]["date"][5:7])
-        if last_m is not None and m != last_m:
-            x = pad_l + i * COLW * CW
-            p.append(f'<line x1="{x:.1f}" y1="{pad_t - 4}" x2="{x:.1f}" '
-                     f'y2="{pad_t + 7 * LH - 2}" class="u-s" '
-                     f'stroke-width="0.5" opacity="0.5"/>')
-        last_m = m
-
-    for r in range(7):
-        chars = []
-        for w in weeks:
-            day = next((d for d in w if d.get("weekday") == r), None)
-            v   = day["contributionCount"] if day else 0
-            chars.append(RAMP[level(v)] * COLW)
-        line = "".join(chars).rstrip()
-        if not line:
-            continue
-        y    = pad_t + r * LH
-        w_px = max(len(line), 1) * CW
-        cid  = f"ry{r}"
-        delay = 0.30 + r * 0.07
-        p.append(f'<clipPath id="{cid}"><rect x="{pad_l}" y="{y}" '
-                 f'height="{LH}" width="0"><animate attributeName="width" '
-                 f'from="0" to="{w_px:.1f}" begin="{delay:.2f}s" dur="0.40s" '
-                 f'fill="freeze"/></rect></clipPath>')
-        safe = line.replace("&", "&amp;").replace("<", "&lt;")
-        p.append(f'<g clip-path="url(#{cid})"><text xml:space="preserve" '
-                 f'x="{pad_l}" y="{y + FS - 0.6:.1f}" class="d-f" '
-                 f'font-size="{FS}">{safe}</text></g>')
+        x = pad_l + i * step
+        if i and m != int(weeks[i - 1][0]["date"][5:7]):
+            p.append(f'<line x1="{x - 0.8:.1f}" y1="{pad_t - 4}" '
+                     f'x2="{x - 0.8:.1f}" y2="{pad_t + 7 * step - 2}" '
+                     f'class="u-s" stroke-width="0.5" opacity="0.5"/>')
+        for day in w:
+            r = day.get("weekday")
+            if r is None:
+                continue
+            lv  = level(day["contributionCount"])
+            cls = "acc" if bdate and day["date"] == bdate else f"lv{lv}"
+            y   = pad_t + r * step
+            p.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{cell}" '
+                     f'height="{cell}" rx="1.5" class="{cls}"/>')
+    p.append('</g>')
 
     for r, lab in ((1, "mon"), (3, "wed"), (5, "fri")):
-        p.append(label(pad_l - 7, pad_t + r * LH + FS - 0.6, lab, 9, "m-f",
+        p.append(label(pad_l - 7, pad_t + r * step + cell - 1, lab, 9, "m-f",
                        "end"))
 
     last_m, last_x = None, -999.0
-    base_y = pad_t + 7 * LH + 13
+    base_y = pad_t + 7 * step + 14
     for i, w in enumerate(weeks):
         m = int(w[0]["date"][5:7])
-        x = pad_l + i * COLW * CW
+        x = pad_l + i * step
         if m != last_m and i < len(weeks) - 1 and x - last_x >= 34:
             p.append(label(x, base_y, MON[m - 1], 9, "m-f"))
             last_x = x
