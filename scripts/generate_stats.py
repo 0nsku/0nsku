@@ -181,11 +181,11 @@ def draw_views(count):
     digits = str(count).rjust(7, "0")[-7:]
     cells = []
     for i, d in enumerate(digits):
-        with open(os.path.join(sprite_dir, f"{d}.jpg"), "rb") as f:
+        with open(os.path.join(sprite_dir, f"{d}.png"), "rb") as f:
             b64 = base64.b64encode(f.read()).decode()
         cells.append(f'<image x="{i * CW}" y="0" width="{CW}" height="{CH}" '
                      'image-rendering="pixelated" preserveAspectRatio="none" '
-                     f'href="data:image/jpeg;base64,{b64}"/>')
+                     f'href="data:image/png;base64,{b64}"/>')
     w = CW * len(digits)
     return (f'<svg width="{w}" height="{CH}" viewBox="0 0 {w} {CH}" '
             'xmlns="http://www.w3.org/2000/svg">'
