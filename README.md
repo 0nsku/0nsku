@@ -23,7 +23,17 @@ and keep improving the systems behind the scenes.
 
 <div align="center">
 
-<img src="https://skill-icons-v2.vercel.app/api/icons?i=typescript,python,javascript,rust,go,lua,ruby,swift,php,html,css&theme=dark&perline=11" alt="TypeScript, Python, JavaScript, Rust, Go, Lua, Ruby, Swift, PHP, HTML and CSS" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=typescript" width="48" height="48" alt="TypeScript" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=python" width="48" height="48" alt="Python" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=javascript" width="48" height="48" alt="JavaScript" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=rust" width="48" height="48" alt="Rust" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=golang" width="48" height="48" alt="Go" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=lua" width="48" height="48" alt="Lua" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=ruby" width="48" height="48" alt="Ruby" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=swift" width="48" height="48" alt="Swift" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=php" width="48" height="48" alt="PHP" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=html" width="48" height="48" alt="HTML" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=css" width="48" height="48" alt="CSS" />
 
 <br>
 <samp>TypeScript · Python · JavaScript · Rust · Go · Lua · Ruby · Swift · PHP · HTML · CSS</samp>
@@ -34,7 +44,18 @@ and keep improving the systems behind the scenes.
 
 <div align="center">
 
-<img src="https://skill-icons-v2.vercel.app/api/icons?i=react,nextjs,nodejs,fastapi,flutter,astro,tailwind,vite,webpack,bun,discord,prisma&theme=dark&perline=12" alt="React, Next.js, Node.js, FastAPI, Flutter, Astro, Tailwind CSS, Vite, Webpack, Bun, Discord and Prisma" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=react" width="48" height="48" alt="React" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=nextjs" width="48" height="48" alt="Next.js" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=nodejs" width="48" height="48" alt="Node.js" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=fastapi" width="48" height="48" alt="FastAPI" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=flutter" width="48" height="48" alt="Flutter" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=astro" width="48" height="48" alt="Astro" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=tailwindcss" width="48" height="48" alt="Tailwind CSS" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=vite" width="48" height="48" alt="Vite" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=webpack" width="48" height="48" alt="Webpack" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=bun" width="48" height="48" alt="Bun" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=discord" width="48" height="48" alt="Discord.js" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=prisma" width="48" height="48" alt="Prisma" />
 
 <br>
 <samp>React · Next.js · Node.js · FastAPI · Flutter · Astro · Tailwind · Vite · Webpack · Bun · Discord.js · Prisma</samp>
@@ -45,12 +66,21 @@ and keep improving the systems behind the scenes.
 
 <div align="center">
 
-<img src="https://skill-icons-v2.vercel.app/api/icons?i=chatgpt,aftereffects,photoshop,illustrator,blender,git,github,docker,postgresql,redis,vercel,cloudflare,aws&theme=dark&perline=10" alt="Codex, After Effects, Photoshop, Illustrator, Blender, Git, GitHub, Docker, PostgreSQL, Redis, Vercel, Cloudflare and AWS" />
-
-<br>
-<br>
 <img src="https://go-skill-icons.vercel.app/api/icons?i=cursor" width="48" height="48" alt="Cursor" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=chatgpt" width="48" height="48" alt="Codex" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=aftereffects" width="48" height="48" alt="After Effects" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=photoshop" width="48" height="48" alt="Photoshop" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=illustrator" width="48" height="48" alt="Illustrator" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=blender" width="48" height="48" alt="Blender" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=git" width="48" height="48" alt="Git" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=github" width="48" height="48" alt="GitHub" />
 <img src="./zsh.svg" width="48" height="48" alt="Zsh" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=docker" width="48" height="48" alt="Docker" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=postgresql" width="48" height="48" alt="PostgreSQL" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=redis" width="48" height="48" alt="Redis" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=vercel" width="48" height="48" alt="Vercel" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=cloudflare" width="48" height="48" alt="Cloudflare" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=aws" width="48" height="48" alt="AWS" />
 
 <br>
 <samp>Cursor · Codex · After Effects · Photoshop · Illustrator · Blender · Git · GitHub · Zsh · Docker · PostgreSQL · Redis · Vercel · Cloudflare · AWS</samp>
