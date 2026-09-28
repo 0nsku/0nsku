@@ -168,8 +168,32 @@ def fetch(login, token):
     return user
 
 
+def draw_views(count):
+    """Compose the anime digit strip from the sprites in assets/views/.
+
+    Digit d shows the committed sprite for that digit, styled after the
+    moe-counter cards — DxD pack: Rias, Akeno, Asia, Koneko, Xenovia,
+    Rossweisse, Irina, Ravel, Kuroka, Grayfia.
+    """
+    CW, CH = 149, 400
+    sprite_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                              "..", "assets", "views")
+    digits = str(count).rjust(7, "0")[-7:]
+    cells = []
+    for i, d in enumerate(digits):
+        with open(os.path.join(sprite_dir, f"{d}.jpg"), "rb") as f:
+            b64 = base64.b64encode(f.read()).decode()
+        cells.append(f'<image x="{i * CW}" y="0" width="{CW}" height="{CH}" '
+                     'image-rendering="pixelated" preserveAspectRatio="none" '
+                     f'href="data:image/jpeg;base64,{b64}"/>')
+    w = CW * len(digits)
+    return (f'<svg width="{w}" height="{CH}" viewBox="0 0 {w} {CH}" '
+            'xmlns="http://www.w3.org/2000/svg">'
+            + "".join(cells) + "</svg>")
+
+
 def fetch_views(login):
-    """Read the existing Komarev counter, then request an anime snapshot.
+    """Read the existing Komarev counter, then render it with our sprites.
 
     The README still contains Komarev's invisible pixel, so the original
     counter continues accumulating views. This function only changes how the
@@ -186,19 +210,7 @@ def fetch_views(login):
         raise RuntimeError("could not read the preserved Komarev view count")
     count = int(matches[-1].replace(",", ""))
 
-    anime_query = urllib.parse.urlencode({
-        "theme": "naruto",
-        "length": "7",
-        "scale": "1",
-        "pixelated": "1",
-        "num": str(count),
-    })
-    anime_url = ("https://anime-counter.lulushu.workers.dev/"
-                 f"@{login}-snapshot?{anime_query}")
-    anime_req = urllib.request.Request(
-        anime_url, headers={"User-Agent": f"{login}-profile-stats"})
-    with urllib.request.urlopen(anime_req, timeout=30) as response:
-        return count, response.read()
+    return count, draw_views(count).encode()
 
 
 def pretty(iso):
