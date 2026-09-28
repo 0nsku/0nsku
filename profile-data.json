@@ -8,49 +8,61 @@
   "by_repo": [
     [
       "TypeScript",
-      45
+      18
     ],
     [
       "Python",
-      39
-    ],
-    [
-      "JavaScript",
-      9
-    ],
-    [
-      "HTML",
-      3
+      13
     ],
     [
       "CSS",
       2
+    ],
+    [
+      "C#",
+      1
+    ],
+    [
+      "Go",
+      1
+    ],
+    [
+      "HTML",
+      1
     ]
   ],
   "by_size": [
     [
-      "Python",
-      57157924
+      "TypeScript",
+      19004333702
     ],
     [
-      "TypeScript",
-      25119218
+      "Python",
+      16484253181
     ],
     [
       "CSS",
-      10508635
+      5354147838
     ],
     [
       "JavaScript",
-      2621922
+      270524409
     ],
     [
-      "C#",
-      1866400
+      "HTML",
+      238975450
+    ],
+    [
+      "Shell",
+      62055315
+    ],
+    [
+      "PLpgSQL",
+      36609238
     ]
   ],
-  "commits_cy": 5115,
-  "commits_ly": 8355,
+  "commits_cy": 5120,
+  "commits_ly": 8360,
   "current": {
     "end": "2026-09-28",
     "length": 42,
@@ -71,7 +83,7 @@
   "reviews": null,
   "source": "github-private",
   "stars": null,
-  "total": 8355,
+  "total": 8360,
   "weekly": [
     157,
     208,
@@ -125,7 +137,7 @@
     47,
     233,
     127,
-    6
+    11
   ],
   "weeks": [
     [
@@ -2054,7 +2066,7 @@
         "weekday": 0
       },
       {
-        "contributionCount": 1,
+        "contributionCount": 6,
         "date": "2026-09-28",
         "weekday": 1
       }

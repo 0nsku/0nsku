@@ -8,7 +8,7 @@ it with Anime Counter's Naruto digit theme.
 Outputs (all sharing one visual language with ascii.svg):
   stats.svg   hero total + weekly sparkline
   streak.svg  current and longest streak
-  langs.svg   top languages, by bytes and by repo count
+  langs.svg   languages weighted by the year's commits, plus active repo count
   year.svg    the year as a character map, in the portrait's own ramp
   views.svg   preserved profile views rendered as anime character digits
 
@@ -60,6 +60,14 @@ query($login: String!, $from: DateTime!, $to: DateTime!, $cyFrom: DateTime!) {
       totalIssueContributions
       totalRepositoryContributions
       restrictedContributionsCount
+      commitContributionsByRepository(maxRepositories: 100) {
+        repository {
+          languages(first: 12, orderBy: {field: SIZE, direction: DESC}) {
+            edges { size node { name } }
+          }
+        }
+        contributions { totalCount }
+      }
     }
     thisYear: contributionsCollection(from: $cyFrom, to: $to) {
       totalCommitContributions
@@ -226,7 +234,17 @@ def streaks(days):
     return cur, best
 
 
+TOP_LANGS = 7
+
+
+def rank_langs(by_size, by_repo):
+    # sort by value then name — equal values must never reorder between runs
+    rank = lambda d: sorted(d.items(), key=lambda kv: (-kv[1], kv[0]))[:TOP_LANGS]
+    return rank(by_size), rank(by_repo)
+
+
 def languages(repos):
+    """All-time fallback: code bytes and primary-language repo counts."""
     by_size, by_repo = {}, {}
     for node in repos:
         edges = (node.get("languages") or {}).get("edges") or []
@@ -236,12 +254,27 @@ def languages(repos):
         if edges:
             top = edges[0]["node"]["name"]
             by_repo[top] = by_repo.get(top, 0) + 1
+    return rank_langs(by_size, by_repo)
 
-    def rank(d):
-        # sort by value then name — equal values must never reorder between runs
-        return sorted(d.items(), key=lambda kv: (-kv[1], kv[0]))[:5]
 
-    return rank(by_size), rank(by_repo)
+def recent_languages(cc):
+    """Languages weighted by recency: per-repo bytes x commits in the
+    contribution window, so the chart reflects what the user is actively
+    working in rather than their whole all-time codebase."""
+    by_size, by_repo = {}, {}
+    for item in cc.get("commitContributionsByRepository") or []:
+        repo    = item.get("repository") or {}
+        edges   = (repo.get("languages") or {}).get("edges") or []
+        commits = (item.get("contributions") or {}).get("totalCount") or 0
+        if not commits:
+            continue
+        for e in edges:
+            name = e["node"]["name"]
+            by_size[name] = by_size.get(name, 0) + e["size"] * commits
+        if edges:
+            top = edges[0]["node"]["name"]
+            by_repo[top] = by_repo.get(top, 0) + 1
+    return rank_langs(by_size, by_repo)
 
 
 def summarise(user):
@@ -251,7 +284,9 @@ def summarise(user):
     days  = [d for w in weeks for d in w]
     weekly = [sum(d["contributionCount"] for d in w) for w in weeks]
     cur, best = streaks(days)
-    by_size, by_repo = languages(user["repositories"]["nodes"])
+    by_size, by_repo = recent_languages(cc)
+    if not by_size:
+        by_size, by_repo = languages(user["repositories"]["nodes"])
     busiest = max(days, key=lambda d: d["contributionCount"], default=None)
     cy    = user.get("thisYear") or {}
     repos = user["repositories"]
@@ -352,10 +387,13 @@ def private_activity(login, token):
     counts = collections.Counter()
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
         for lang_bytes, main_language, commits in pool.map(scan, repos):
-            by_size.update(lang_bytes)
             counts.update(commits)
-            if main_language:
-                by_repo[main_language] += 1
+            repo_commits = sum(commits.values())
+            if repo_commits:
+                for name, size in lang_bytes.items():
+                    by_size[name] += size * repo_commits
+                if main_language:
+                    by_repo[main_language] += 1
 
     weeks = []
     week = []
@@ -379,7 +417,7 @@ def private_activity(login, token):
     current, longest = streaks(days)
 
     def rank(counter):
-        return sorted(counter.items(), key=lambda item: (-item[1], item[0]))[:5]
+        return sorted(counter.items(), key=lambda item: (-item[1], item[0]))[:TOP_LANGS]
 
     busiest = max(counts.items(), key=lambda kv: kv[1], default=(None, 0))
     cy_prefix = f"{today.year}-"
@@ -581,7 +619,7 @@ def draw_langs(s):
     name_w, bar_max = 82, colw - 82 - 44
 
     p      = [head(WIDTH, H)]
-    groups = [(LEFT, "by bytes", s["by_size"], True),
+    groups = [(LEFT, "by activity", s["by_size"], True),
               (LEFT + colw + 30, "by repos", s["by_repo"], False)]
     for gi, (gx, title, data, as_pct) in enumerate(groups):
         p.append(f'<g opacity="0">{fade(0.10 + gi * 0.10)}'
@@ -820,7 +858,7 @@ def main():
     print(f"{s['total']} commits, {s['active']} active days, "
           f"best week {s['best_week']}, current streak "
           f"{s['current']['length']}, longest {s['longest']['length']}")
-    print("languages by bytes: "
+    print("languages (recent-weighted): "
           + ", ".join(f"{n} {v}" for n, v in s["by_size"]))
     print(f"preserved profile views: {view_count}")
     print("updated: " + (", ".join(sorted(changed)) if changed else "nothing"))
