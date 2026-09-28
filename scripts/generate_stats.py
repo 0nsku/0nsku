@@ -45,18 +45,30 @@ API = "https://api.github.com/graphql"
 #    includes private activity, and the public-only default is misleading when
 #    compared with the signed-in GitHub profile.
 QUERY = """
-query($login: String!, $from: DateTime!, $to: DateTime!) {
+query($login: String!, $from: DateTime!, $to: DateTime!, $cyFrom: DateTime!) {
   viewer { login }
   user(login: $login) {
+    followers { totalCount }
     contributionsCollection(from: $from, to: $to) {
       contributionCalendar {
         totalContributions
         weeks { contributionDays { contributionCount date weekday } }
       }
+      totalCommitContributions
+      totalPullRequestContributions
+      totalPullRequestReviewContributions
+      totalIssueContributions
+      totalRepositoryContributions
+      restrictedContributionsCount
+    }
+    thisYear: contributionsCollection(from: $cyFrom, to: $to) {
+      totalCommitContributions
     }
     repositories(first: 100, ownerAffiliations: OWNER, isFork: false,
                  privacy: PUBLIC) {
+      totalCount
       nodes {
+        stargazerCount
         languages(first: 12, orderBy: {field: SIZE, direction: DESC}) {
           edges { size node { name } }
         }
@@ -119,14 +131,17 @@ MON    = ["jan", "feb", "mar", "apr", "may", "jun",
 def window():
     today = datetime.now(timezone.utc).date()
     start = today - timedelta(days=364)
-    return (f"{start.isoformat()}T00:00:00Z", f"{today.isoformat()}T23:59:59Z")
+    cy_start = date(today.year, 1, 1)
+    return (f"{start.isoformat()}T00:00:00Z", f"{today.isoformat()}T23:59:59Z",
+            f"{cy_start.isoformat()}T00:00:00Z")
 
 
 def fetch(login, token):
-    since, until = window()
+    since, until, cy_from = window()
     body = json.dumps({"query": QUERY,
                        "variables": {"login": login,
-                                     "from": since, "to": until}}).encode()
+                                     "from": since, "to": until,
+                                     "cyFrom": cy_from}}).encode()
     req = urllib.request.Request(
         API, data=body,
         headers={"Authorization": f"bearer {token}",
@@ -230,12 +245,16 @@ def languages(repos):
 
 
 def summarise(user):
-    cal   = user["contributionsCollection"]["contributionCalendar"]
+    cc    = user["contributionsCollection"]
+    cal   = cc["contributionCalendar"]
     weeks = [w["contributionDays"] for w in cal["weeks"]]
     days  = [d for w in weeks for d in w]
     weekly = [sum(d["contributionCount"] for d in w) for w in weeks]
     cur, best = streaks(days)
     by_size, by_repo = languages(user["repositories"]["nodes"])
+    busiest = max(days, key=lambda d: d["contributionCount"], default=None)
+    cy    = user.get("thisYear") or {}
+    repos = user["repositories"]
     return dict(
         source="github",
         total=cal["totalContributions"],
@@ -243,7 +262,20 @@ def summarise(user):
         best_week=max(weekly) if weekly else 0,
         weekly=weekly, weeks=weeks,
         current=cur, longest=best,
-        by_size=by_size, by_repo=by_repo)
+        by_size=by_size, by_repo=by_repo,
+        busiest_day=(busiest["contributionCount"], busiest["date"])
+                    if busiest else (0, None),
+        commits_ly=cc.get("totalCommitContributions"),
+        commits_cy=cy.get("totalCommitContributions"),
+        prs=cc.get("totalPullRequestContributions"),
+        reviews=cc.get("totalPullRequestReviewContributions"),
+        issues=cc.get("totalIssueContributions"),
+        repos_made=cc.get("totalRepositoryContributions"),
+        restricted=cc.get("restrictedContributionsCount") or 0,
+        stars=sum(n.get("stargazerCount") or 0 for n in repos["nodes"]),
+        followers=(user.get("followers") or {}).get("totalCount"),
+        public_repos=repos.get("totalCount"),
+        private_repos=user.get("_privateRepoCount"))
 
 
 def rest_json(url, token):
@@ -349,6 +381,8 @@ def private_activity(login, token):
     def rank(counter):
         return sorted(counter.items(), key=lambda item: (-item[1], item[0]))[:5]
 
+    busiest = max(counts.items(), key=lambda kv: kv[1], default=(None, 0))
+    cy_prefix = f"{today.year}-"
     return dict(
         source="github-private",
         total=sum(counts.values()),
@@ -360,6 +394,19 @@ def private_activity(login, token):
         longest=longest,
         by_size=rank(by_size),
         by_repo=rank(by_repo),
+        busiest_day=(busiest[1], busiest[0]),
+        commits_ly=sum(counts.values()),
+        commits_cy=sum(v for d, v in counts.items()
+                       if d.startswith(cy_prefix)),
+        prs=None,
+        reviews=None,
+        issues=None,
+        repos_made=None,
+        restricted=None,
+        stars=None,
+        followers=None,
+        public_repos=None,
+        private_repos=None,
     )
 
 
@@ -426,24 +473,59 @@ def hbar(x, y, w, h, cls="d-f", r=3.0):
             f'H{x:.1f}Z" class="{cls}"/>')
 
 
+def fmt(v):
+    return f"{v:,}" if v is not None else None
+
+
 def draw_stats(s):
-    """Hero number, two secondary counts, and the weekly sparkline."""
-    H      = 148
+    """Hero number, a grid of eight metrics, and the weekly sparkline."""
+    H      = 216
     weekly = s["weekly"] or [0]
     peak   = max(weekly) or 1
     p = [head(WIDTH, H)]
-    p.append(f'<g opacity="0">{fade(0.10)}'
-             + label(0, 50, s["total"], 52, "e-f", extra=' font-weight="600"')
-             + label(0, 72, "commits in the last year", 12) + '</g>')
-    secondary = [(s["active"], "active days"),
-                 (s["best_week"], "best week")]
-    for i, (val, lab) in enumerate(secondary):
-        p.append(f'<g opacity="0">{fade(0.30 + i * 0.12)}'
-                 + label(WIDTH, 30 + i * 40, val, 19, "e-f", "end",
-                         ' font-weight="600"')
-                 + label(WIDTH, 47 + i * 40, lab, 11, "m-f", "end") + '</g>')
 
-    base, top = H - 10, H - 58
+    hero_lab = ("commits in the last year"
+                if s["source"] == "github-private"
+                else "contributions in the last year")
+    p.append(f'<g opacity="0">{fade(0.10)}'
+             + label(0, 50, fmt(s["total"]), 52, "e-f",
+                     extra=' font-weight="600"')
+             + label(0, 72, hero_lab, 12))
+    sub = []
+    if s.get("restricted"):
+        sub.append(f"incl. {fmt(s['restricted'])} private")
+    if s.get("public_repos") is not None:
+        repos = f"{s['public_repos']} public repos"
+        if s.get("private_repos"):
+            repos += f" + {s['private_repos']} private"
+        sub.append(repos)
+    if sub:
+        p.append(label(0, 90, " · ".join(sub), 10))
+    p.append('</g>')
+
+    metrics = [
+        (s.get("commits_cy"), "commits this year"),
+        (s.get("commits_ly"), "commits last year"),
+        (s.get("prs"),        "pull requests"),
+        (s.get("issues"),     "issues opened"),
+        (s.get("stars"),      "stars earned"),
+        (s.get("repos_made"), "repos created"),
+        (s.get("active"),     "active days"),
+        (s.get("best_week"),  "best week"),
+    ]
+    metrics = [(v, l) for v, l in metrics if v is not None]
+    ncols = 4
+    colw  = (WIDTH - LEFT) / ncols
+    for i, (val, lab) in enumerate(metrics):
+        col, row = i % ncols, i // ncols
+        x = LEFT + col * colw
+        y = 116 + row * 34
+        p.append(f'<g opacity="0">{fade(0.30 + i * 0.06)}'
+                 + label(x, y, fmt(val), 19, "e-f",
+                         extra=' font-weight="600"')
+                 + label(x, y + 13, lab, 9, "m-f") + '</g>')
+
+    base, top = H - 8, H - 46
     span = base - top
     step = WIDTH / max(len(weekly) - 1, 1)
     pts  = [(i * step, base - (v / peak) * span) for i, v in enumerate(weekly)]
@@ -472,9 +554,9 @@ def draw_streak(s):
     cells = []
     for k, lab in (("current", "current streak"), ("longest", "longest streak")):
         r    = s[k]
-        span = (f"{pretty(r['start'])} &#8211; {pretty(r['end'])}"
+        span = (f"{pretty(r['start'])} – {pretty(r['end'])}"
                 if r["length"] and r.get("start") and r.get("end")
-                else "&#8212;")
+                else "—")
         cells.append((r["length"], lab, span))
 
     p   = [head(WIDTH, H)]
@@ -562,11 +644,15 @@ def draw_year(s):
         return 4
 
     p = [head(WIDTH, H)]
+    bcount, bdate = s.get("busiest_day") or (0, None)
+    sub = (f"{fmt(s['total'])} contributions · {s['active']} of "
+           f"{sum(len(w) for w in weeks)} days active")
+    if bdate:
+        sub += f" · busiest day {bcount} on {pretty(bdate)}"
     p.append(f'<g opacity="0">{fade(0.10)}'
              + label(pad_l, 16, "THE YEAR", 9, "m-f",
                      extra=' letter-spacing="1.3"')
-             + label(pad_l, 32, f"{s['active']} of "
-                     f"{sum(len(w) for w in weeks)} days had a contribution", 11)
+             + label(pad_l, 32, sub, 11)
              + '</g>')
 
     lx = WIDTH - 6
@@ -575,6 +661,17 @@ def draw_year(s):
              + f'<text xml:space="preserve" x="{lx - 72}" y="32" class="d-f" '
              f'font-size="{FS}">{" ".join(RAMP[1:])}</text>'
              + label(lx, 32, "more", 9, "m-f", "end") + '</g>')
+
+    # hairline where each month starts — the map reads as month columns
+    last_m = None
+    for i, w in enumerate(weeks):
+        m = int(w[0]["date"][5:7])
+        if last_m is not None and m != last_m:
+            x = pad_l + i * COLW * CW
+            p.append(f'<line x1="{x:.1f}" y1="{pad_t - 4}" x2="{x:.1f}" '
+                     f'y2="{pad_t + 7 * LH - 2}" class="u-s" '
+                     f'stroke-width="0.5" opacity="0.5"/>')
+        last_m = m
 
     for r in range(7):
         chars = []
@@ -671,14 +768,20 @@ def main():
     user = fetch(login, token)
     s = summarise(user)
     cache_path = os.path.join(out_dir, "profile-data.json")
-    if not s["total"]:
-        if (user.get("_viewerLogin") or "").lower() == login.lower() and user.get("_privateRepoCount"):
-            print(f"scanning {user['_privateRepoCount']} private repositories...")
-            s = private_activity(login, token)
+    if (user.get("_viewerLogin") or "").lower() == login.lower() and user.get("_privateRepoCount"):
+        print(f"scanning {user['_privateRepoCount']} private repositories...")
+        private = private_activity(login, token)
+        if not s["total"]:
+            s = private
         else:
-            fallback = cached_activity(cache_path)
-            if fallback:
-                s = fallback
+            # the calendar already covers private activity; the repo scan still
+            # improves the language charts, which otherwise see public repos only
+            s["by_size"], s["by_repo"] = private["by_size"], private["by_repo"]
+            s["lang_source"] = "all-repos"
+    elif not s["total"]:
+        fallback = cached_activity(cache_path)
+        if fallback:
+            s = fallback
     files = {
         "stats.svg":  draw_stats(s),
         "streak.svg": draw_streak(s),
