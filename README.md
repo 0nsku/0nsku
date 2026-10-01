@@ -106,34 +106,3 @@ and keep improving the systems behind the scenes.
 <img src="./views.svg" width="420" alt="Anime character profile view counter" />
 
 </div>
-
-<!--START_SECTION:waka-->
-```text
-GitHub:
-Contributions 2026       5421
-Current streak           0 days
-Longest streak           69 days
-Public repos             1
-Private repos            113
-
-
-Total this week   0 secs
-
-Languages:
-Python               45.1%        ███████████░░░░░░░░░░░░░░   45.07 %
-HTML                 19.3%        ████░░░░░░░░░░░░░░░░░░░░░   19.29 %
-TypeScript           19.3%        ████░░░░░░░░░░░░░░░░░░░░░   19.26 %
-CSS                  10.7%        ██░░░░░░░░░░░░░░░░░░░░░░░   10.69 %
-JavaScript           1.9%         ░░░░░░░░░░░░░░░░░░░░░░░░░   1.89 %
-
-Editors:
-Visual Studio Code   15 hrs 57 mins ████████████████████░░░░░   80.84 %
-Cursor               3 hrs 46 mins ████░░░░░░░░░░░░░░░░░░░░░   19.11 %
-
-OS:
-Windows              19 hrs 38 mins █████████████████████████   100.00 %
-```
-
-*Last updated: 01/10/2026 05:08:32 UTC*
-
-<!--END_SECTION:waka-->
