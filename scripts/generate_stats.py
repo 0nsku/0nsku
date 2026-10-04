@@ -62,15 +62,28 @@ query($login: String!, $from: DateTime!, $to: DateTime!, $cyFrom: DateTime!) {
       restrictedContributionsCount
       commitContributionsByRepository(maxRepositories: 100) {
         repository {
+          nameWithOwner
           languages(first: 12, orderBy: {field: SIZE, direction: DESC}) {
             edges { size node { name } }
           }
         }
         contributions { totalCount }
       }
+      pullRequestContributionsByRepository(maxRepositories: 100) {
+        repository { nameWithOwner }
+        contributions { totalCount }
+      }
+      issueContributionsByRepository(maxRepositories: 100) {
+        repository { nameWithOwner }
+        contributions { totalCount }
+      }
     }
     thisYear: contributionsCollection(from: $cyFrom, to: $to) {
       totalCommitContributions
+      commitContributionsByRepository(maxRepositories: 100) {
+        repository { nameWithOwner }
+        contributions { totalCount }
+      }
     }
     repositories(first: 100, ownerAffiliations: OWNER, isFork: false,
                  privacy: PUBLIC) {
@@ -248,6 +261,14 @@ def streaks(days):
 
 TOP_LANGS = 7
 
+# Scratch/grind repositories that should never show up in the public stats.
+# Lowercase full names, comma-separated via the EXCLUDE_REPOS env var.
+EXCLUDED_REPOS = {
+    name.strip().lower()
+    for name in os.environ.get("EXCLUDE_REPOS", "0nsku/meta").split(",")
+    if name.strip()
+}
+
 
 def rank_langs(by_size, by_repo):
     # sort by value then name — equal values must never reorder between runs
@@ -276,6 +297,8 @@ def recent_languages(cc):
     by_size, by_repo = {}, {}
     for item in cc.get("commitContributionsByRepository") or []:
         repo    = item.get("repository") or {}
+        if (repo.get("nameWithOwner") or "").lower() in EXCLUDED_REPOS:
+            continue
         edges   = (repo.get("languages") or {}).get("edges") or []
         commits = (item.get("contributions") or {}).get("totalCount") or 0
         if not commits:
@@ -287,6 +310,15 @@ def recent_languages(cc):
             top = edges[0]["node"]["name"]
             by_repo[top] = by_repo.get(top, 0) + 1
     return rank_langs(by_size, by_repo)
+
+
+def excluded_total(collection, key):
+    """Contributions GitHub attributes to the excluded repos, per category."""
+    return sum(
+        (item.get("contributions") or {}).get("totalCount") or 0
+        for item in collection.get(key) or []
+        if ((item.get("repository") or {}).get("nameWithOwner") or "")
+           .lower() in EXCLUDED_REPOS)
 
 
 def summarise(user):
@@ -302,6 +334,11 @@ def summarise(user):
     busiest = max(days, key=lambda d: d["contributionCount"], default=None)
     cy    = user.get("thisYear") or {}
     repos = user["repositories"]
+    excluded = dict(
+        commits=excluded_total(cc, "commitContributionsByRepository"),
+        commits_cy=excluded_total(cy, "commitContributionsByRepository"),
+        prs=excluded_total(cc, "pullRequestContributionsByRepository"),
+        issues=excluded_total(cc, "issueContributionsByRepository"))
     return dict(
         source="github",
         total=cal["totalContributions"],
@@ -322,7 +359,8 @@ def summarise(user):
         stars=sum(n.get("stargazerCount") or 0 for n in repos["nodes"]),
         followers=(user.get("followers") or {}).get("totalCount"),
         public_repos=repos.get("totalCount"),
-        private_repos=user.get("_privateRepoCount"))
+        private_repos=user.get("_privateRepoCount"),
+        excluded=excluded)
 
 
 def rest_json(url, token):
@@ -349,7 +387,8 @@ def private_activity(login, token):
         batch = rest_json(
             "https://api.github.com/user/repos?affiliation=owner&sort=updated"
             f"&per_page=100&page={page}", token)
-        repos.extend(repo for repo in batch if not repo.get("fork"))
+        repos.extend(repo for repo in batch if not repo.get("fork")
+                     and repo["full_name"].lower() not in EXCLUDED_REPOS)
         if len(batch) < 100:
             break
         page += 1
@@ -458,6 +497,148 @@ def private_activity(login, token):
         public_repos=None,
         private_repos=None,
     )
+
+
+def excluded_calendar(login, token, start, today):
+    """Per-day contribution events on the excluded repos, via REST.
+
+    The contribution calendar can't be filtered by repository, so excluded
+    repos' events are subtracted day by day: default-branch commits by the
+    user, plus the PRs and issues they opened and the repo creation itself.
+    """
+    days   = collections.Counter()
+    totals = collections.Counter()
+    cy_start = date(today.year, 1, 1).isoformat()
+    for full in EXCLUDED_REPOS:
+        encoded = urllib.parse.quote(full, safe="/")
+        try:
+            repo = rest_json(f"https://api.github.com/repos/{encoded}", token)
+        except urllib.error.HTTPError as exc:
+            if exc.code == 404:
+                continue
+            raise
+        created = (repo.get("created_at") or "")[:10]
+        if created and start <= created <= today.isoformat():
+            days[created] += 1
+            totals["repos"] += 1
+
+        page = 1
+        while True:
+            params = urllib.parse.urlencode({
+                "author": login,
+                "sha": repo.get("default_branch") or "main",
+                "since": f"{start}T00:00:00Z",
+                "until": f"{today.isoformat()}T23:59:59Z",
+                "per_page": 100,
+                "page": page,
+            })
+            try:
+                batch = rest_json(
+                    f"https://api.github.com/repos/{encoded}/commits?{params}",
+                    token)
+            except urllib.error.HTTPError as exc:
+                if exc.code in (404, 409):
+                    break
+                raise
+            for item in batch:
+                stamp = item["commit"]["author"]["date"][:10]
+                days[stamp] += 1
+                totals["commits"] += 1
+                if stamp >= cy_start:
+                    totals["commits_cy"] += 1
+            if len(batch) < 100:
+                break
+            page += 1
+
+        page = 1
+        while True:
+            batch = rest_json(
+                f"https://api.github.com/repos/{encoded}/pulls"
+                f"?state=all&per_page=100&page={page}", token)
+            for item in batch:
+                stamp = (item.get("created_at") or "")[:10]
+                if start <= stamp <= today.isoformat():
+                    days[stamp] += 1
+                    totals["prs"] += 1
+            if len(batch) < 100:
+                break
+            page += 1
+
+        # The repo issues endpoint also returns PRs, so search is the
+        # cheap way to list just the issues.
+        page = 1
+        while True:
+            try:
+                result = rest_json(
+                    "https://api.github.com/search/issues"
+                    f"?q=repo:{full}+is:issue&per_page=100&page={page}", token)
+            except urllib.error.HTTPError:
+                break
+            items = result.get("items") or []
+            for item in items:
+                stamp = (item.get("created_at") or "")[:10]
+                if start <= stamp <= today.isoformat():
+                    days[stamp] += 1
+                    totals["issues"] += 1
+            if len(items) < 100:
+                break
+            page += 1
+    return days, totals
+
+
+def apply_exclusions(s, login, token):
+    """Subtract excluded-repo activity from every number on the card.
+
+    Category totals come from GraphQL's per-repository breakdown (GitHub's
+    own attribution). For the calendar: GitHub does not attribute the
+    excluded events to the same dates the REST API reports — it piles most
+    of them onto the merge day — so the full excluded total is removed
+    greedily from the calendar days the repo's events could have landed on,
+    largest days first."""
+    if not EXCLUDED_REPOS or s.get("source") != "github":
+        return s
+    today = datetime.now(timezone.utc).date()
+    start = (today - timedelta(days=364)).isoformat()
+    edays, etot = excluded_calendar(login, token, start, today)
+
+    ex = s.get("excluded") or {}
+    pool = sum(ex.get(k) or etot.get(k) or 0
+               for k in ("commits", "prs", "issues")) + etot.get("repos", 0)
+    flat = [d for w in s["weeks"] for d in w]
+    active = sorted((d for d in flat if edays.get(d["date"])),
+                    key=lambda d: -d["contributionCount"])
+    removed = 0
+    for day in active:
+        if pool <= 0:
+            break
+        cut = min(day["contributionCount"], pool)
+        day["contributionCount"] -= cut
+        pool -= cut
+        removed += cut
+    if not removed and not any(etot.values()):
+        return s
+
+    days   = [d for w in s["weeks"] for d in w]
+    weekly = [sum(d["contributionCount"] for d in w) for w in s["weeks"]]
+    busiest = max(days, key=lambda d: d["contributionCount"], default=None)
+    ex = s.get("excluded") or {}
+    s["total"]      = s["total"] - removed
+    s["weekly"]     = weekly
+    s["active"]     = sum(1 for d in days if d["contributionCount"] > 0)
+    s["best_week"]  = max(weekly) if weekly else 0
+    s["busiest_day"] = ((busiest["contributionCount"], busiest["date"])
+                        if busiest else (0, None))
+    s["current"], s["longest"] = streaks(days)
+    for key, gql_key, rest_key in (
+            ("commits_ly", "commits", "commits"),
+            ("commits_cy", "commits_cy", "commits_cy"),
+            ("prs", "prs", "prs"),
+            ("issues", "issues", "issues")):
+        if s.get(key) is not None:
+            s[key] = s[key] - (ex.get(gql_key) or etot.get(rest_key) or 0)
+    if s.get("repos_made") is not None:
+        s["repos_made"] = s["repos_made"] - etot.get("repos", 0)
+    return s
 
 
 def cached_activity(path):
@@ -825,6 +1006,7 @@ def main():
 
     user = fetch(login, token)
     s = summarise(user)
+    s = apply_exclusions(s, login, token)
     cache_path = os.path.join(out_dir, "profile-data.json")
     if (user.get("_viewerLogin") or "").lower() == login.lower() and user.get("_privateRepoCount"):
         print(f"scanning {user['_privateRepoCount']} private repositories...")
