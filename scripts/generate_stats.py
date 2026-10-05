@@ -1015,9 +1015,14 @@ def main():
             s = private
         else:
             # the calendar already covers private activity; the repo scan still
-            # improves the language charts, which otherwise see public repos only
+            # improves the language charts, which otherwise see public repos only.
+            # Its per-repo commit count is also the only source that covers
+            # private repos — GraphQL's commit totals are public-only, so the
+            # card uses the scan's count (both already exclude EXCLUDED_REPOS).
             s["by_size"], s["by_repo"] = private["by_size"], private["by_repo"]
             s["lang_source"] = "all-repos"
+            s["commits_ly"] = private["commits_ly"]
+            s["commits_cy"] = private["commits_cy"]
     elif not s["total"]:
         fallback = cached_activity(cache_path)
         if fallback:
