@@ -2,7 +2,7 @@
 
 <img src="./ascii.svg" width="460" alt="ASCII portrait of 0nsku" />
 
-<img src="./stats.svg" width="620" alt="GitHub commits and weekly activity chart" />
+<img src="./stats.svg?v=2" width="620" alt="GitHub commits and weekly activity chart" />
 
 <samp>self-taught developer · full stack · bots & automation</samp>
 
@@ -91,11 +91,11 @@ and keep improving the systems behind the scenes.
 
 <div align="center">
 
-<img src="./streak.svg" width="620" alt="Current and longest coding streak" />
+<img src="./streak.svg?v=2" width="620" alt="Current and longest coding streak" />
 
-<img src="./langs.svg" width="620" alt="Top languages by bytes and repository count" />
+<img src="./langs.svg?v=2" width="620" alt="Top languages by bytes and repository count" />
 
-<img src="./year.svg" width="620" alt="ASCII contribution chart for the last year" />
+<img src="./year.svg?v=2" width="620" alt="ASCII contribution chart for the last year" />
 
 </div>
 
@@ -103,6 +103,6 @@ and keep improving the systems behind the scenes.
 
 <div align="center">
 
-<img src="./views.svg" width="420" alt="Anime character profile view counter" />
+<img src="./views.svg?v=2" width="420" alt="Anime character profile view counter" />
 
 </div>
