@@ -736,11 +736,11 @@ def draw_stats(s):
 
     metrics = [
         (s.get("commits_cy"), "commits this year"),
-        (s.get("commits_ly"), "commits last year"),
         (s.get("prs"),        "pull requests"),
         (s.get("issues"),     "issues opened"),
+        (s.get("reviews"),    "pr reviews"),
         (s.get("stars"),      "stars earned"),
-        (s.get("repos_made"), "repos created"),
+        (s.get("followers"),  "followers"),
         (s.get("active"),     "active days"),
         (s.get("best_week"),  "best week"),
     ]
