@@ -181,15 +181,6 @@ Most of my work lives in private repositories.
 
 </div>
 
-<img src="./hd-productivity.svg" width="620" alt="productivity" />
-
-<div align="center">
-
-<img src="./productivity.svg" width="620" alt="Productivity by weekday" />
-
-
-</div>
-
 <img src="./hd-visitors.svg" width="620" alt="visitors" />
 
 <div align="center">
