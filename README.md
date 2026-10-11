@@ -34,9 +34,32 @@ and keep improving the systems behind the scenes.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=php" width="48" height="48" alt="PHP" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=html" width="48" height="48" alt="HTML" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=css" width="48" height="48" alt="CSS" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=java" width="48" height="48" alt="Java" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=cs" width="48" height="48" alt="C#" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=cpp" width="48" height="48" alt="C++" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=c" width="48" height="48" alt="C" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=kotlin" width="48" height="48" alt="Kotlin" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=dart" width="48" height="48" alt="Dart" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=scala" width="48" height="48" alt="Scala" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=r" width="48" height="48" alt="R" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=elixir" width="48" height="48" alt="Elixir" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=haskell" width="48" height="48" alt="Haskell" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=julia" width="48" height="48" alt="Julia" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=zig" width="48" height="48" alt="Zig" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=perl" width="48" height="48" alt="Perl" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=ocaml" width="48" height="48" alt="OCaml" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=erlang" width="48" height="48" alt="Erlang" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=clojure" width="48" height="48" alt="Clojure" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=fortran" width="48" height="48" alt="Fortran" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=nim" width="48" height="48" alt="Nim" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=v" width="48" height="48" alt="V" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=assembly" width="48" height="48" alt="Assembly" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=solidity" width="48" height="48" alt="Solidity" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=bash" width="48" height="48" alt="Bash" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=matlab" width="48" height="48" alt="MATLAB" />
 
 <br>
-<samp>TypeScript · Python · JavaScript · Rust · Go · Lua · Ruby · Swift · PHP · HTML · CSS</samp>
+<samp>TypeScript · Python · JavaScript · Rust · Go · Lua · Ruby · Swift · PHP · HTML · CSS · Java · C# · C++ · C · Kotlin · Dart · Scala · R · Elixir · Haskell · Julia · Zig · Perl · OCaml · Erlang · Clojure · Fortran · Nim · V · Assembly · Solidity · Bash · MATLAB</samp>
 
 </div>
 
