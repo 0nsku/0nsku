@@ -190,15 +190,6 @@ Most of my work lives in private repositories.
 
 </div>
 
-<img src="./hd-trophies.svg" width="620" alt="trophies" />
-
-<div align="center">
-
-<img src="./trophies.svg" width="620" alt="Milestones" />
-
-
-</div>
-
 <img src="./hd-visitors.svg" width="620" alt="visitors" />
 
 <div align="center">

@@ -1206,7 +1206,6 @@ def main():
         "year.svg":   draw_year(s),
         "activity.svg":     draw_activity(s),
         "productivity.svg": draw_productivity(s),
-        "trophies.svg":     draw_trophies(s),
     }
     for slug, label in (
         ("about", "about"),
