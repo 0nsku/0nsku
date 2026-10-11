@@ -13,11 +13,11 @@
 
 <img src="./hd-about.svg" width="620" alt="about" />
 
-> Self-taught developer focused on turning useful ideas into working software.
+> Self-taught developer — I take ideas from concept to shipped product.
 
-I build full-stack products, Discord bots, backend services, and automation.<br>
-Most of my work lives in private repositories, where I experiment, ship quickly,<br>
-and keep improving the systems behind the scenes.
+Full-stack by default: web apps, backend services, APIs, and automation.<br>
+Most of my work lives in private repositories where I iterate fast<br>
+and keep raising the bar.
 
 <img src="./hd-languages.svg" width="620" alt="languages" />
 
