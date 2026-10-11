@@ -46,7 +46,7 @@ and keep improving the systems behind the scenes.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=powershell" width="48" height="48" alt="PowerShell" />
 
 <br>
-<samp>TypeScript · Python · JavaScriptust · Go · Luauby · Swift · PHP · HTML · CSS · Java · C# · C++ · C · Kotlin · Dart · Bash · MATLAB · Luau · PowerShell</samp>
+<samp>TypeScript · Python · JavaScript · Rust · Go · Lua · Ruby · Swift · PHP · HTML · CSS · Java · C# · C++ · C · Kotlin · Dart · Bash · MATLAB · Luau · PowerShell</samp>
 
 </div>
 
