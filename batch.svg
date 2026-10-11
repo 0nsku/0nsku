@@ -1,0 +1,17 @@
+<svg width="48" height="48" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" id="batch">
+<style>
+#batch {
+  path.rect {fill: #242938}
+  path.logo,rect.cursor {fill: #EDEDED}
+  @media (prefers-color-scheme: light) {
+    path.logo,rect.cursor {fill: #242938}
+    path.rect {fill: #F4F2ED}
+  }
+}
+</style>
+<path class="rect" d="M196 0H60C26.8629 0 0 26.8629 0 60V196C0 229.137 26.8629 256 60 256H196C229.137 256 256 229.137 256 196V60C256 26.8629 229.137 0 196 0Z"/>
+<path class="logo" d="M78 84 L118 120 L78 156 L96 156 L136 120 L96 84 Z"/>
+<rect class="cursor" x="140" y="148" width="48" height="12" rx="3"/>
+</svg>
+</svg>

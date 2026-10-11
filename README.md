@@ -44,9 +44,10 @@ and keep improving the systems behind the scenes.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=matlab" width="48" height="48" alt="MATLAB" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=luau" width="48" height="48" alt="Luau" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=powershell" width="48" height="48" alt="PowerShell" />
+<img src="./batch.svg" width="48" height="48" alt="Batchfile" />
 
 <br>
-<samp>TypeScript · Python · JavaScript · Rust · Go · Lua · Ruby · Swift · PHP · HTML · CSS · Java · C# · C++ · C · Kotlin · Dart · Bash · MATLAB · Luau · PowerShell</samp>
+<samp>TypeScript · Python · JavaScript · Rust · Go · Lua · Ruby · Swift · PHP · HTML · CSS · Java · C# · C++ · C · Kotlin · Dart · Bash · MATLAB · Luau · PowerShell · Batchfile</samp>
 
 </div>
 
