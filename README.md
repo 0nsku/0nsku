@@ -15,8 +15,7 @@
 
 > Self-taught developer. I design, build, and ship software end to end —
 web apps, backend services, APIs, and the automation between them.<br>
-Most of my work lives in private repositories;<br>
-what's public is a fraction of it.
+Most of my work lives in private repositories.
 
 <img src="./hd-languages.svg" width="620" alt="languages" />
 
