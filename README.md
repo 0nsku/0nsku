@@ -76,8 +76,6 @@ and keep improving the systems behind the scenes.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=github" width="48" height="48" alt="GitHub" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=githubactions" width="48" height="48" alt="GitHub Actions" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=docker" width="48" height="48" alt="Docker" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=kubernetes" width="48" height="48" alt="Kubernetes" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=terraform" width="48" height="48" alt="Terraform" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=nginx" width="48" height="48" alt="Nginx" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=postgresql" width="48" height="48" alt="PostgreSQL" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=redis" width="48" height="48" alt="Redis" />
@@ -85,7 +83,6 @@ and keep improving the systems behind the scenes.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=mysql" width="48" height="48" alt="MySQL" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=firebase" width="48" height="48" alt="Firebase" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=supabase" width="48" height="48" alt="Supabase" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=postman" width="48" height="48" alt="Postman" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=vercel" width="48" height="48" alt="Vercel" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=netlify" width="48" height="48" alt="Netlify" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=railway" width="48" height="48" alt="Railway" />
@@ -93,12 +90,10 @@ and keep improving the systems behind the scenes.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=aws" width="48" height="48" alt="AWS" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=gcp" width="48" height="48" alt="Google Cloud" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=azure" width="48" height="48" alt="Azure" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=grafana" width="48" height="48" alt="Grafana" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=sentry" width="48" height="48" alt="Sentry" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=discord" width="48" height="48" alt="Discord" />
 
 <br>
-<samp>Codex · After Effects · Photoshop · Illustrator · Blender · Figma · Git · GitHub · Actions · Docker · Kubernetes · Terraform · Nginx · PostgreSQL · Redis · MongoDB · MySQL · Firebase · Supabase · Postman · Vercel · Netlify · Railway · Cloudflare · AWS · GCP · Azure · Grafana · Sentry · Discord</samp>
+<samp>Codex · After Effects · Photoshop · Illustrator · Blender · Figma · Git · GitHub · Actions · Docker · Nginx · PostgreSQL · Redis · MongoDB · MySQL · Firebase · Supabase · Vercel · Netlify · Railway · Cloudflare · AWS · GCP · Azure · Discord</samp>
 
 </div>
 
