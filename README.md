@@ -103,12 +103,12 @@ and keep improving the systems behind the scenes.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=pycharm" width="48" height="48" alt="PyCharm" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=neovim" width="48" height="48" alt="Neovim" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=zed" width="48" height="48" alt="Zed" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=devin" width="48" height="48" alt="Devin" />
+<img src="./devin.svg" width="48" height="48" alt="Devin" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=claude" width="48" height="48" alt="Claude" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=copilot" width="48" height="48" alt="GitHub Copilot" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=githubcopilot" width="48" height="48" alt="GitHub Copilot" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=powershell" width="48" height="48" alt="PowerShell" />
 <img src="./zsh.svg" width="48" height="48" alt="Zsh" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=termius" width="48" height="48" alt="Termius" />
+<img src="./termius.svg" width="48" height="48" alt="Termius" />
 
 <br>
 <samp>Windows · macOS · Android · WSL · Linux · Ubuntu · Raspberry Pi · Cursor · VS Code · PyCharm · Neovim · Zed · Devin · Claude · Copilot · PowerShell · Zsh · Termius</samp>
