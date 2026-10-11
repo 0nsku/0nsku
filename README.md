@@ -66,24 +66,42 @@ and keep improving the systems behind the scenes.
 
 <div align="center">
 
-<img src="https://go-skill-icons.vercel.app/api/icons?i=cursor" width="48" height="48" alt="Cursor" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=chatgpt" width="48" height="48" alt="Codex" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=aftereffects" width="48" height="48" alt="After Effects" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=photoshop" width="48" height="48" alt="Photoshop" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=illustrator" width="48" height="48" alt="Illustrator" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=blender" width="48" height="48" alt="Blender" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=figma" width="48" height="48" alt="Figma" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=git" width="48" height="48" alt="Git" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=github" width="48" height="48" alt="GitHub" />
-<img src="./zsh.svg" width="48" height="48" alt="Zsh" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=githubactions" width="48" height="48" alt="GitHub Actions" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=docker" width="48" height="48" alt="Docker" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=kubernetes" width="48" height="48" alt="Kubernetes" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=terraform" width="48" height="48" alt="Terraform" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=nginx" width="48" height="48" alt="Nginx" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=postgresql" width="48" height="48" alt="PostgreSQL" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=redis" width="48" height="48" alt="Redis" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=mongodb" width="48" height="48" alt="MongoDB" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=mysql" width="48" height="48" alt="MySQL" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=firebase" width="48" height="48" alt="Firebase" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=supabase" width="48" height="48" alt="Supabase" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=postman" width="48" height="48" alt="Postman" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=vercel" width="48" height="48" alt="Vercel" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=netlify" width="48" height="48" alt="Netlify" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=railway" width="48" height="48" alt="Railway" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=cloudflare" width="48" height="48" alt="Cloudflare" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=aws" width="48" height="48" alt="AWS" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=gcp" width="48" height="48" alt="Google Cloud" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=azure" width="48" height="48" alt="Azure" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=grafana" width="48" height="48" alt="Grafana" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=sentry" width="48" height="48" alt="Sentry" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=discord" width="48" height="48" alt="Discord" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=slack" width="48" height="48" alt="Slack" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=notion" width="48" height="48" alt="Notion" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=jira" width="48" height="48" alt="Jira" />
 
 <br>
-<samp>Cursor · Codex · After Effects · Photoshop · Illustrator · Blender · Git · GitHub · Zsh · Docker · PostgreSQL · Redis · Vercel · Cloudflare · AWS</samp>
+<samp>Codex · After Effects · Photoshop · Illustrator · Blender · Figma · Git · GitHub · Actions · Docker · Kubernetes · Terraform · Nginx · PostgreSQL · Redis · MongoDB · MySQL · Firebase · Supabase · Postman · Vercel · Netlify · Railway · Cloudflare · AWS · GCP · Azure · Grafana · Sentry · Discord · Slack · Notion · Jira</samp>
 
 </div>
 
