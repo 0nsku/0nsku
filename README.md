@@ -71,8 +71,11 @@ and keep improving the systems behind the scenes.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=illustrator" width="48" height="48" alt="Illustrator" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=blender" width="48" height="48" alt="Blender" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=figma" width="48" height="48" alt="Figma" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=framer" width="48" height="48" alt="Framer" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=canva" width="48" height="48" alt="Canva" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=git" width="48" height="48" alt="Git" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=github" width="48" height="48" alt="GitHub" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=gitlab" width="48" height="48" alt="GitLab" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=githubactions" width="48" height="48" alt="GitHub Actions" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=docker" width="48" height="48" alt="Docker" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=nginx" width="48" height="48" alt="Nginx" />
@@ -89,10 +92,12 @@ and keep improving the systems behind the scenes.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=aws" width="48" height="48" alt="AWS" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=gcp" width="48" height="48" alt="Google Cloud" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=azure" width="48" height="48" alt="Azure" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=stripe" width="48" height="48" alt="Stripe" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=wordpress" width="48" height="48" alt="WordPress" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=discord" width="48" height="48" alt="Discord" />
 
 <br>
-<samp>After Effects · Photoshop · Illustrator · Blender · Figma · Git · GitHub · Actions · Docker · Nginx · PostgreSQL · Redis · MongoDB · MySQL · Firebase · Supabase · Vercel · Netlify · Railway · Cloudflare · AWS · GCP · Azure · Discord</samp>
+<samp>After Effects · Photoshop · Illustrator · Blender · Figma · Framer · Canva · Git · GitHub · GitLab · Actions · Docker · Nginx · PostgreSQL · Redis · MongoDB · MySQL · Firebase · Supabase · Vercel · Netlify · Railway · Cloudflare · AWS · GCP · Azure · Stripe · WordPress · Discord</samp>
 
 </div>
 
