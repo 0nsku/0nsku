@@ -93,7 +93,7 @@ and keep improving the systems behind the scenes.
 
 <img src="./streak.svg?v=3" width="620" alt="Current and longest coding streak" />
 
-<img src="./langs.svg?v=3" width="620" alt="Top languages by bytes and repository count" />
+<img src="./langs.svg?v=4" width="620" alt="Top languages by bytes and repository count" />
 
 <img src="./year.svg?v=3" width="620" alt="ASCII contribution chart for the last year" />
 
