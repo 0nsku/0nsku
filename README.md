@@ -41,14 +41,13 @@ and keep improving the systems behind the scenes.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=kotlin" width="48" height="48" alt="Kotlin" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=dart" width="48" height="48" alt="Dart" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=bash" width="48" height="48" alt="Bash" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=matlab" width="48" height="48" alt="MATLAB" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=luau" width="48" height="48" alt="Luau" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=powershell" width="48" height="48" alt="PowerShell" />
 <img src="./batch.svg" width="48" height="48" alt="Batchfile" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=cmake" width="48" height="48" alt="CMake" />
 
 <br>
-<samp>TypeScript · Python · JavaScript · Rust · Go · Lua · Ruby · Swift · PHP · HTML · CSS · Java · C# · C++ · C · Kotlin · Dart · Bash · MATLAB · Luau · PowerShell · Batchfile · CMake</samp>
+<samp>TypeScript · Python · JavaScript · Rust · Go · Lua · Ruby · Swift · PHP · HTML · CSS · Java · C# · C++ · C · Kotlin · Dart · Bash · Luau · PowerShell · Batchfile · CMake</samp>
 
 </div>
 
