@@ -40,28 +40,13 @@ and keep improving the systems behind the scenes.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=c" width="48" height="48" alt="C" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=kotlin" width="48" height="48" alt="Kotlin" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=dart" width="48" height="48" alt="Dart" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=scala" width="48" height="48" alt="Scala" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=r" width="48" height="48" alt="R" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=elixir" width="48" height="48" alt="Elixir" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=haskell" width="48" height="48" alt="Haskell" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=julia" width="48" height="48" alt="Julia" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=zig" width="48" height="48" alt="Zig" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=perl" width="48" height="48" alt="Perl" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=ocaml" width="48" height="48" alt="OCaml" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=erlang" width="48" height="48" alt="Erlang" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=clojure" width="48" height="48" alt="Clojure" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=fortran" width="48" height="48" alt="Fortran" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=nim" width="48" height="48" alt="Nim" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=v" width="48" height="48" alt="V" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=assembly" width="48" height="48" alt="Assembly" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=solidity" width="48" height="48" alt="Solidity" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=bash" width="48" height="48" alt="Bash" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=matlab" width="48" height="48" alt="MATLAB" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=luau" width="48" height="48" alt="Luau" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=powershell" width="48" height="48" alt="PowerShell" />
 
 <br>
-<samp>TypeScript · Python · JavaScript · Rust · Go · Lua · Ruby · Swift · PHP · HTML · CSS · Java · C# · C++ · C · Kotlin · Dart · Scala · R · Elixir · Haskell · Julia · Zig · Perl · OCaml · Erlang · Clojure · Fortran · Nim · V · Assembly · Solidity · Bash · MATLAB · Luau · PowerShell</samp>
+<samp>TypeScript · Python · JavaScriptust · Go · Luauby · Swift · PHP · HTML · CSS · Java · C# · C++ · C · Kotlin · Dart · Bash · MATLAB · Luau · PowerShell</samp>
 
 </div>
 
@@ -83,7 +68,7 @@ and keep improving the systems behind the scenes.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=prisma" width="48" height="48" alt="Prisma" />
 
 <br>
-<samp>React · Next.js · Node.js · FastAPI · Flutter · Astro · Tailwind · Vite · Webpack · Bun · Discord.js · Prisma</samp>
+<samp>React · Next.js · Node.js · FastAPI · Flutter · Astro · Tailwindite · Webpack · Bun · Discord.js · Prisma</samp>
 
 </div>
 
@@ -122,7 +107,7 @@ and keep improving the systems behind the scenes.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=discord" width="48" height="48" alt="Discord" />
 
 <br>
-<samp>After Effects · Photoshop · Illustrator · Blender · Figma · Framer · Canva · Git · GitHub · GitLab · Actions · Docker · Nginx · PostgreSQL · Redis · MongoDB · MySQL · Firebase · Supabase · Vercel · Netlify · Railway · Cloudflare · AWS · GCP · Azure · Stripe · WordPress · Discord</samp>
+<samp>After Effects · Photoshop · Illustrator · Blender · Figma · Framer · Canva · Git · GitHub · GitLab · Actions · Docker · Nginx · PostgreSQLedis · MongoDB · MySQL · Firebase · Supabaseercel · Netlifyailway · Cloudflare · AWS · GCP · Azure · Stripe · WordPress · Discord</samp>
 
 </div>
 
@@ -151,7 +136,7 @@ and keep improving the systems behind the scenes.
 <img src="./termius.svg" width="48" height="48" alt="Termius" />
 
 <br>
-<samp>Windows · macOS · Android · WSL · Linux · Ubuntu · Raspberry Pi · Cursor · VS Code · PyCharm · Neovim · Zed · Devin · Codex · Claude · Copilot · PowerShell · Zsh · Termius</samp>
+<samp>Windows · macOS · Android · WSL · Linux · Ubuntuaspberry Pi · CursorS Code · PyCharm · Neovim · Zed · Devin · Codex · Claude · Copilot · PowerShell · Zsh · Termius</samp>
 
 </div>
 
