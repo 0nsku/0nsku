@@ -47,8 +47,6 @@ Most of my work lives in private repositories.
 <img src="./shell.svg" width="48" height="48" alt="Shell" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=cmake" width="48" height="48" alt="CMake" />
 
-<br>
-<samp>TypeScript · Python · JavaScript · Rust · Go · Lua · Ruby · Swift · PHP · HTML · CSS · Java · C# · C++ · C · Kotlin · Dart · Bash · Luau · PowerShell · Batchfile · Shell · CMake</samp>
 
 </div>
 
@@ -96,8 +94,6 @@ Most of my work lives in private repositories.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=discord" width="48" height="48" alt="discord.py" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=electron" width="48" height="48" alt="Electron" />
 
-<br>
-<samp>React · Next.js · Node.js · FastAPI · Flutter · Astro · Tailwind · Vite · Webpack · Bun · Discord.js · Prisma · Vue · Remix · Bootstrap · MUI · shadcn/ui · Chakra UI · Radix UI · Framer Motion · Deno · Flask · PyTorch · NumPy · Pytest · .NET · Laravel · SwiftUI · React Native · Mongoose · Drizzle · GraphQL · Vitest · Playwright · Redux · NextAuth · Three.js · discord.py · Electron</samp>
 
 </div>
 
@@ -135,8 +131,6 @@ Most of my work lives in private repositories.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=wordpress" width="48" height="48" alt="WordPress" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=discord" width="48" height="48" alt="Discord" />
 
-<br>
-<samp>After Effects · Photoshop · Illustrator · Blender · Figma · Framer · Canva · Git · GitHub · GitLab · Actions · Docker · Nginx · PostgreSQL · Redis · MongoDB · MySQL · Firebase · Supabase · Vercel · Netlify · Railway · Cloudflare · AWS · GCP · Azure · Stripe · WordPress · Discord</samp>
 
 </div>
 
@@ -164,8 +158,6 @@ Most of my work lives in private repositories.
 <img src="./zsh.svg" width="48" height="48" alt="Zsh" />
 <img src="./termius.svg" width="48" height="48" alt="Termius" />
 
-<br>
-<samp>Windows · macOS · Android · WSL · Linux · Ubuntu · Raspberry Pi · Cursor · VS Code · PyCharm · Neovim · Zed · Devin · Codex · Claude · Copilot · PowerShell · Zsh · Termius</samp>
 
 </div>
 
@@ -185,7 +177,7 @@ Most of my work lives in private repositories.
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=0nsku&bg_color=0d1117&color=a78bfa&line=8b5cf6&point=ddd6fe&area=true&hide_border=true" width="620" alt="Contribution activity graph" />
+<img src="./activity.svg" width="620" alt="Contribution activity graph" />
 
 </div>
 
@@ -193,8 +185,8 @@ Most of my work lives in private repositories.
 
 <div align="center">
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=0nsku&theme=2077" width="620" alt="Profile details" />
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=0nsku&theme=2077&utcOffset=0" width="620" alt="Productive time" />
+<img src="./productivity.svg" width="620" alt="Productivity by weekday" />
+
 
 </div>
 
@@ -202,7 +194,8 @@ Most of my work lives in private repositories.
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=0nsku&theme=algolia&no-frame=true&no-bg=true&column=7&margin-w=8" width="620" alt="GitHub trophies" />
+<img src="./trophies.svg" width="620" alt="Milestones" />
+
 
 </div>
 

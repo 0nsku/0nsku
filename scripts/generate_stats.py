@@ -877,6 +877,142 @@ def draw_langs(s):
     return "".join(p)
 
 
+def draw_activity(s):
+    """Weekly contribution totals as a filled area line, months on the axis."""
+    pad_l, pad_t, pad_b = LEFT, 44, 26
+    weekly = s["weekly"][-52:]
+    days   = [d for w in s["weeks"] for d in w]
+    peak   = max(weekly) or 1
+    plot_h = 120
+    H      = pad_t + plot_h + pad_b
+    plot_w = WIDTH - pad_l - 10
+    n      = len(weekly)
+    step   = plot_w / max(n - 1, 1)
+
+    pts = [(pad_l + i * step,
+            pad_t + plot_h - (v / peak) * plot_h)
+           for i, v in enumerate(weekly)]
+    line = "M" + " L".join(f"{x:.1f} {y:.1f}" for x, y in pts)
+    area = (line + f" L{pts[-1][0]:.1f} {pad_t + plot_h}"
+            f" L{pts[0][0]:.1f} {pad_t + plot_h} Z")
+
+    p = [head(WIDTH, H)]
+    bcount, bdate = s.get("busiest_day") or (0, None)
+    sub = (f"{fmt(s['total'])} contributions · peak week {s['best_week']}"
+           + (f" · busiest day {bcount} on {pretty(bdate)}" if bdate else ""))
+    p.append(f'<g opacity="0">{fade(0.10)}'
+             + label(pad_l, 16, "ACTIVITY", 9, "m-f",
+                     extra=' letter-spacing="1.3"')
+             + label(pad_l, 32, sub, 11) + "</g>")
+
+    for frac in (0.25, 0.5, 0.75):
+        gy = pad_t + plot_h * (1 - frac)
+        p.append(f'<line x1="{pad_l}" y1="{gy:.0f}" x2="{WIDTH - 10}" '
+                 f'y2="{gy:.0f}" class="u-s" stroke-width="0.5"'
+                 f' opacity="0">{fade(0.2)}</line>')
+    base = pad_t + plot_h
+    p.append(f'<line x1="{pad_l}" y1="{base}" x2="{WIDTH - 10}" y2="{base}" '
+             f'class="u-s" stroke-width="1" opacity="0">{fade(0.2)}</line>')
+
+    p.append(f'<g opacity="0">{fade(0.35, 0.7)}'
+             f'<path d="{area}" class="w"/>'
+             f'<path d="{line}" class="d-s" stroke-width="1.6"'
+             f' stroke-linejoin="round" stroke-linecap="round" fill="none"/>'
+             f'</g>')
+    px, py = pts[-1]
+    p.append(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="2.6" class="e-f"'
+             f' opacity="0">{fade(0.8)}</circle>')
+
+    first = days[0]["date"] if days else None
+    ticks = []
+    if first:
+        first_d = date.fromisoformat(first)
+        for i in range(0, n, 9):
+            tick_d = first_d + timedelta(weeks=i)
+            ticks.append(label(pad_l + i * step, H - 8,
+                               MON[tick_d.month - 1], 9, "m-f"))
+    p.append(f'<g opacity="0">{fade(0.7)}' + "".join(ticks) + "</g>")
+    p.append("</svg>")
+    return "".join(p)
+
+
+def draw_productivity(s):
+    """Contributions summed by weekday — which days carry the work."""
+    pad_l, pad_t = LEFT, 44
+    sums = [0] * 7
+    for d in [x for w in s["weeks"] for x in w]:
+        sums[d["weekday"]] += d["contributionCount"]
+    order  = [1, 2, 3, 4, 5, 6, 0]          # mon … sun
+    names  = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"]
+    peak   = max(sums) or 1
+    top    = sums.index(peak)
+    bar_h  = 70
+    col_w  = (WIDTH - pad_l - 10) / 7
+    bw     = col_w * 0.52
+    H      = pad_t + bar_h + 40
+
+    p = [head(WIDTH, H)]
+    p.append(f'<g opacity="0">{fade(0.10)}'
+             + label(pad_l, 16, "PRODUCTIVITY", 9, "m-f",
+                     extra=' letter-spacing="1.3"')
+             + label(pad_l, 32,
+                     f"busiest {names[top]}s · {fmt(sums[top])} contributions",
+                     11) + "</g>")
+    base = pad_t + bar_h
+    p.append(f'<line x1="{pad_l}" y1="{base}" x2="{WIDTH - 10}" y2="{base}" '
+             f'class="u-s" stroke-width="1" opacity="0">{fade(0.2)}</line>')
+    for i, wd in enumerate(order):
+        v = sums[wd]
+        h = max((v / peak) * bar_h, 2)
+        x = pad_l + i * col_w + (col_w - bw) / 2
+        p.append(f'<g opacity="0">{fade(0.3 + i * 0.06)}'
+                 f'<rect x="{x:.1f}" y="{base - h:.1f}" width="{bw:.1f}" '
+                 f'height="{h:.1f}" rx="3" class="d-f"/>'
+                 + label(x + bw / 2, base - h - 6, v, 9, "e-f", "middle")
+                 + label(x + bw / 2, base + 16, names[wd], 9, "m-f", "middle")
+                 + "</g>")
+    p.append("</svg>")
+    return "".join(p)
+
+
+def draw_trophies(s):
+    """Milestone cells — the numbers a trophy shelf would show."""
+    pad_l, pad_t = LEFT, 44
+    cells = [
+        ("contributions", fmt(s["total"])),
+        ("commits",       fmt(s.get("commits_cy") or s.get("commits_ly"))),
+        ("pull requests", fmt(s.get("prs"))),
+        ("reviews",       fmt(s.get("reviews"))),
+        ("longest streak", f"{s['longest']}d"),
+        ("best week",     fmt(s["best_week"])),
+        ("active days",   fmt(s["active"])),
+        ("stars",         fmt(s.get("stars") or 0)),
+    ]
+    cols   = 4
+    cw     = (WIDTH - pad_l - 10 - (cols - 1) * 10) / cols
+    ch     = 56
+    rows   = (len(cells) + cols - 1) // cols
+    H      = int(pad_t + rows * ch + (rows - 1) * 10 + 14)
+
+    p = [head(WIDTH, H)]
+    p.append(f'<g opacity="0">{fade(0.10)}'
+             + label(pad_l, 16, "MILESTONES", 9, "m-f",
+                     extra=' letter-spacing="1.3"')
+             + label(pad_l, 32, "the numbers behind the badges", 11) + "</g>")
+    for i, (name, val) in enumerate(cells):
+        r, q = divmod(i, cols)
+        x = pad_l + q * (cw + 10)
+        y = pad_t + r * (ch + 10)
+        p.append(f'<g opacity="0">{fade(0.25 + i * 0.06)}'
+                 f'<rect x="{x:.1f}" y="{y}" width="{cw:.1f}" height="{ch}" '
+                 f'rx="6" class="u-s" stroke-width="1" fill="none"/>'
+                 + label(x + 12, y + 24, val or "—", 15, "e-f",
+                         extra=' font-weight="600"')
+                 + label(x + 12, y + 41, name, 9, "m-f") + "</g>")
+    p.append("</svg>")
+    return "".join(p)
+
+
 def draw_heading(word):
     """A section heading in the mono face, with a hairline running right.
 
@@ -1068,6 +1204,9 @@ def main():
         "streak.svg": draw_streak(s),
         "langs.svg":  draw_langs(s),
         "year.svg":   draw_year(s),
+        "activity.svg":     draw_activity(s),
+        "productivity.svg": draw_productivity(s),
+        "trophies.svg":     draw_trophies(s),
     }
     for slug, label in (
         ("about", "about"),
