@@ -66,7 +66,6 @@ and keep improving the systems behind the scenes.
 
 <div align="center">
 
-<img src="https://go-skill-icons.vercel.app/api/icons?i=chatgpt" width="48" height="48" alt="Codex" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=aftereffects" width="48" height="48" alt="After Effects" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=photoshop" width="48" height="48" alt="Photoshop" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=illustrator" width="48" height="48" alt="Illustrator" />
@@ -93,7 +92,7 @@ and keep improving the systems behind the scenes.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=discord" width="48" height="48" alt="Discord" />
 
 <br>
-<samp>Codex · After Effects · Photoshop · Illustrator · Blender · Figma · Git · GitHub · Actions · Docker · Nginx · PostgreSQL · Redis · MongoDB · MySQL · Firebase · Supabase · Vercel · Netlify · Railway · Cloudflare · AWS · GCP · Azure · Discord</samp>
+<samp>After Effects · Photoshop · Illustrator · Blender · Figma · Git · GitHub · Actions · Docker · Nginx · PostgreSQL · Redis · MongoDB · MySQL · Firebase · Supabase · Vercel · Netlify · Railway · Cloudflare · AWS · GCP · Azure · Discord</samp>
 
 </div>
 
@@ -114,6 +113,7 @@ and keep improving the systems behind the scenes.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=neovim" width="48" height="48" alt="Neovim" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=zed" width="48" height="48" alt="Zed" />
 <img src="./devin.svg" width="48" height="48" alt="Devin" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=chatgpt" width="48" height="48" alt="Codex" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=claude" width="48" height="48" alt="Claude" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=githubcopilot" width="48" height="48" alt="GitHub Copilot" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=powershell" width="48" height="48" alt="PowerShell" />
@@ -121,7 +121,7 @@ and keep improving the systems behind the scenes.
 <img src="./termius.svg" width="48" height="48" alt="Termius" />
 
 <br>
-<samp>Windows · macOS · Android · WSL · Linux · Ubuntu · Raspberry Pi · Cursor · VS Code · PyCharm · Neovim · Zed · Devin · Claude · Copilot · PowerShell · Zsh · Termius</samp>
+<samp>Windows · macOS · Android · WSL · Linux · Ubuntu · Raspberry Pi · Cursor · VS Code · PyCharm · Neovim · Zed · Devin · Codex · Claude · Copilot · PowerShell · Zsh · Termius</samp>
 
 </div>
 
