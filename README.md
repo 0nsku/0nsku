@@ -97,11 +97,14 @@ and keep improving the systems behind the scenes.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=debian" width="48" height="48" alt="Debian/Ubuntu" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=cursor" width="48" height="48" alt="Cursor" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=vscode" width="48" height="48" alt="VS Code" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=devin" width="48" height="48" alt="Devin" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=claude" width="48" height="48" alt="Claude" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=copilot" width="48" height="48" alt="GitHub Copilot" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=powershell" width="48" height="48" alt="PowerShell" />
 <img src="./zsh.svg" width="48" height="48" alt="Zsh" />
 
 <br>
-<samp>Windows · WSL · Linux · Ubuntu · Cursor · VS Code · PowerShell · Zsh</samp>
+<samp>Windows · WSL · Linux · Ubuntu · Cursor · VS Code · Devin · Claude · Copilot · PowerShell · Zsh</samp>
 
 </div>
 
