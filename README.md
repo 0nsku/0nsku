@@ -103,6 +103,6 @@ and keep improving the systems behind the scenes.
 
 <div align="center">
 
-<img src="https://count.getloli.com/@0nsku?theme=rule34&padding=7&offset=0&align=center&scale=1&pixelated=1&darkmode=0" alt="Views" />
+<img src="./views.svg?v=4" width="420" alt="Views" />
 
 </div>

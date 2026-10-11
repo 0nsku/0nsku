@@ -27,6 +27,7 @@ import concurrent.futures
 import functools
 import html
 import json
+import math
 import os
 import re
 import sys
@@ -185,20 +186,19 @@ def draw_views(count):
     """Compose the anime digit strip from the sprites in assets/views/.
 
     Digit d shows the committed sprite for that digit, styled after the
-    moe-counter cards — DxD pack: Rias, Akeno, Asia, Koneko, Xenovia,
-    Rossweisse, Irina, Ravel, Kuroka, Grayfia.
+    moe-counter rule34 pack — the animated digits aqeu uses.
     """
-    CW, CH = 149, 400
+    CW, CH = 45, 100
     sprite_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                               "..", "assets", "views")
     digits = str(count).rjust(7, "0")[-7:]
     cells = []
     for i, d in enumerate(digits):
-        with open(os.path.join(sprite_dir, f"{d}.png"), "rb") as f:
+        with open(os.path.join(sprite_dir, f"{d}.gif"), "rb") as f:
             b64 = base64.b64encode(f.read()).decode()
         cells.append(f'<image x="{i * CW}" y="0" width="{CW}" height="{CH}" '
                      'image-rendering="pixelated" preserveAspectRatio="none" '
-                     f'href="data:image/png;base64,{b64}"/>')
+                     f'href="data:image/gif;base64,{b64}"/>')
     w = CW * len(digits)
     return (f'<svg width="{w}" height="{CH}" viewBox="0 0 {w} {CH}" '
             'xmlns="http://www.w3.org/2000/svg">'
@@ -804,39 +804,75 @@ def draw_streak(s):
     return "".join(p)
 
 
-def draw_langs(s):
-    """Two small charts: share of bytes, and count of repos by main language."""
-    rows  = max(len(s["by_size"]), len(s["by_repo"]), 1)
-    H     = 26 + rows * 22 + 6
-    colw  = (WIDTH - LEFT - 30) / 2
-    name_w, bar_max = 82, colw - 82 - 44
+LANG_COLORS = {
+    "html": "#e34c26", "typescript": "#3178c6", "python": "#3572a5",
+    "css": "#663399", "javascript": "#f1e05a", "plpgsql": "#336790",
+    "shell": "#89e051", "jupyter notebook": "#da5b0b", "go": "#00add8",
+    "rust": "#dea584", "c++": "#f34b7d", "c": "#555555", "c#": "#178600",
+    "lua": "#000080", "scss": "#c6538c", "less": "#1d365d", "vue": "#41b883",
+    "svelte": "#ff3e00", "php": "#4f5d95", "ruby": "#701516",
+    "java": "#b07219", "kotlin": "#a97bff", "swift": "#f05138",
+    "dart": "#00b4ab", "solidity": "#aa6746", "makefile": "#427819",
+    "dockerfile": "#384d54", "powershell": "#012456", "nix": "#7e7eff",
+    "zig": "#ec915c", "elixir": "#6e4a7e", "haskell": "#5e5086",
+    "scala": "#c22d40", "r": "#198ce7", "matlab": "#e16737",
+    "objective-c": "#438eff", "perl": "#0298c3", "assembly": "#6e4c13",
+    "glsl": "#5686a5", "yaml": "#cb171e", "toml": "#9c4221",
+    "markdown": "#083fa1", "batchfile": "#c1f12e", "cmake": "#da3434",
+}
+LANG_RAMP = ["#7c3aed", "#a78bfa", "#6d28d9", "#c4b5fd",
+             "#4c1d95", "#8b5cf6", "#ddd6fe"]
 
-    p      = [head(WIDTH, H)]
-    groups = [(LEFT, "by activity", s["by_size"], True),
-              (LEFT + colw + 30, "by repos", s["by_repo"], False)]
-    for gi, (gx, title, data, as_pct) in enumerate(groups):
+
+def draw_langs(s):
+    """Two pie charts: share of activity, and repos by main language."""
+    groups = [("by activity", s["by_size"]), ("by repos", s["by_repo"])]
+    rows   = max(len(s["by_size"]), len(s["by_repo"]), 1)
+    colw   = (WIDTH - LEFT - 30) / 2
+    R      = 52
+    H      = 30 + max(2 * R + 18, rows * 20) + 8
+
+    p = [head(WIDTH, H)]
+    for gi, (title, data) in enumerate(groups):
+        gx = LEFT if gi == 0 else LEFT + colw + 30
         p.append(f'<g opacity="0">{fade(0.10 + gi * 0.10)}'
                  + label(gx, 12, title.upper(), 9, "m-f",
                          extra=' letter-spacing="1.3"') + '</g>')
         if not data:
             continue
-        top   = max(v for _, v in data) or 1
         total = sum(v for _, v in data) or 1
-        cid   = f"rl{gi}"
-        clip, cursor = wipe(cid, gx + name_w, 20, bar_max, rows * 22,
-                            0.34 + gi * 0.12, 0.95)
-        p.append(clip)
+        cx, cy = gx + R + 4, 30 + R + 10
+        lx     = gx + 2 * R + 26
+        angle  = -math.pi / 2
         for ri, (name, val) in enumerate(data):
-            y     = 26 + ri * 22
-            shown = (f"{val / total * 100:.0f}%" if as_pct else f"{val}")
+            frac  = val / total
+            a2    = angle + frac * 2 * math.pi
+            color = LANG_COLORS.get(name.lower(), LANG_RAMP[ri % len(LANG_RAMP)])
+            if frac >= 0.9999:
+                piece = (f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{R}" '
+                         f'fill="{color}"/>')
+            elif frac > 0.0015:
+                x1, y1 = cx + R * math.cos(angle), cy + R * math.sin(angle)
+                x2, y2 = cx + R * math.cos(a2),    cy + R * math.sin(a2)
+                large  = 1 if frac > 0.5 else 0
+                piece = (f'<path d="M{cx:.1f} {cy:.1f}L{x1:.1f} {y1:.1f}'
+                         f'A{R} {R} 0 {large} 1 {x2:.1f} {y2:.1f}Z" '
+                         f'fill="{color}"/>')
+            else:
+                piece = ""
+            if piece:
+                p.append(f'<g opacity="0">'
+                         f'{fade(0.22 + gi * 0.10 + ri * 0.06)}'
+                         + piece + '</g>')
+            ly = 36 + ri * 20
             p.append(f'<g opacity="0">{fade(0.24 + gi * 0.10 + ri * 0.05)}'
-                     + label(gx, y + 8, name.lower()[:11], 11, "e-f")
-                     + label(gx + colw - 6, y + 8, shown, 11, "m-f", "end")
+                     + f'<rect x="{lx:.0f}" y="{ly - 9:.0f}" width="8" height="8" '
+                       f'rx="2" fill="{color}"/>'
+                     + label(lx + 14, ly, name.lower()[:13], 11, "e-f")
+                     + label(gx + colw - 6, ly, f"{frac * 100:.0f}%",
+                             11, "m-f", "end")
                      + '</g>')
-            p.append(f'<g clip-path="url(#{cid})">'
-                     + hbar(gx + name_w, y, bar_max * val / top, 7)
-                     + '</g>')
-        p.append(cursor)
+            angle = a2
     p.append("</svg>")
     return "".join(p)
 
