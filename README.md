@@ -4,7 +4,7 @@
 
 <img src="./stats.svg?v=3" width="620" alt="GitHub commits and weekly activity chart" />
 
-<samp>self-taught developer · full stack · bots & automation</samp>
+<samp>self-taught developer · full stack</samp>
 
 <!-- Preserve the original Komarev counter identity. -->
 <img src="https://komarev.com/ghpvc/?username=0nsku&style=pixel" width="1" height="1" alt="" />
@@ -13,11 +13,10 @@
 
 <img src="./hd-about.svg" width="620" alt="about" />
 
-> Self-taught developer — I take ideas from concept to shipped product.
-
-Full-stack by default: web apps, backend services, APIs, and automation.<br>
-Most of my work lives in private repositories where I iterate fast<br>
-and keep raising the bar.
+> Self-taught developer. I design, build, and ship software end to end —
+web apps, backend services, APIs, and the automation between them.<br>
+Most of my work lives in private repositories;<br>
+what's public is a fraction of it.
 
 <img src="./hd-languages.svg" width="620" alt="languages" />
 
