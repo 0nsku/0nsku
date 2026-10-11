@@ -57,9 +57,11 @@ and keep improving the systems behind the scenes.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=solidity" width="48" height="48" alt="Solidity" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=bash" width="48" height="48" alt="Bash" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=matlab" width="48" height="48" alt="MATLAB" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=luau" width="48" height="48" alt="Luau" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=powershell" width="48" height="48" alt="PowerShell" />
 
 <br>
-<samp>TypeScript · Python · JavaScript · Rust · Go · Lua · Ruby · Swift · PHP · HTML · CSS · Java · C# · C++ · C · Kotlin · Dart · Scala · R · Elixir · Haskell · Julia · Zig · Perl · OCaml · Erlang · Clojure · Fortran · Nim · V · Assembly · Solidity · Bash · MATLAB</samp>
+<samp>TypeScript · Python · JavaScript · Rust · Go · Lua · Ruby · Swift · PHP · HTML · CSS · Java · C# · C++ · C · Kotlin · Dart · Scala · R · Elixir · Haskell · Julia · Zig · Perl · OCaml · Erlang · Clojure · Fortran · Nim · V · Assembly · Solidity · Bash · MATLAB · Luau · PowerShell</samp>
 
 </div>
 
