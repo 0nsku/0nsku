@@ -6,6 +6,8 @@
 
 <samp>self-taught developer · full stack</samp>
 
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=15&duration=2800&pause=900&color=A78BFA&center=true&vCenter=true&width=620&lines=design.+build.+ship.;full+stack+%C2%B7+web+%C2%B7+backend+%C2%B7+apis;most+of+the+work+lives+in+private+repos" alt="typing" />
+
 <!-- Preserve the original Komarev counter identity. -->
 <img src="https://komarev.com/ghpvc/?username=0nsku&style=pixel" width="1" height="1" alt="" />
 
@@ -134,7 +136,7 @@ Most of my work lives in private repositories.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=discord" width="48" height="48" alt="Discord" />
 
 <br>
-<samp>After Effects · Photoshop · Illustrator · Blender · Figma · Framer · Canva · Git · GitHub · GitLab · Actions · Docker · Nginx · PostgreSQLedis · MongoDB · MySQL · Firebase · Supabaseercel · Netlifyailway · Cloudflare · AWS · GCP · Azure · Stripe · WordPress · Discord</samp>
+<samp>After Effects · Photoshop · Illustrator · Blender · Figma · Framer · Canva · Git · GitHub · GitLab · Actions · Docker · Nginx · PostgreSQL · Redis · MongoDB · MySQL · Firebase · Supabase · Vercel · Netlify · Railway · Cloudflare · AWS · GCP · Azure · Stripe · WordPress · Discord</samp>
 
 </div>
 
@@ -163,7 +165,7 @@ Most of my work lives in private repositories.
 <img src="./termius.svg" width="48" height="48" alt="Termius" />
 
 <br>
-<samp>Windows · macOS · Android · WSL · Linux · Ubuntuaspberry Pi · CursorS Code · PyCharm · Neovim · Zed · Devin · Codex · Claude · Copilot · PowerShell · Zsh · Termius</samp>
+<samp>Windows · macOS · Android · WSL · Linux · Ubuntu · Raspberry Pi · Cursor · VS Code · PyCharm · Neovim · Zed · Devin · Codex · Claude · Copilot · PowerShell · Zsh · Termius</samp>
 
 </div>
 
@@ -176,6 +178,31 @@ Most of my work lives in private repositories.
 <img src="./langs.svg?v=3" width="620" alt="Top languages by bytes and repository count" />
 
 <img src="./year.svg?v=3" width="620" alt="ASCII contribution chart for the last year" />
+
+</div>
+
+<img src="./hd-activity.svg" width="620" alt="activity" />
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=0nsku&bg_color=0d1117&color=a78bfa&line=8b5cf6&point=ddd6fe&area=true&hide_border=true" width="620" alt="Contribution activity graph" />
+
+</div>
+
+<img src="./hd-productivity.svg" width="620" alt="productivity" />
+
+<div align="center">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=0nsku&theme=2077" width="620" alt="Profile details" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=0nsku&theme=2077&utcOffset=0" width="620" alt="Productive time" />
+
+</div>
+
+<img src="./hd-trophies.svg" width="620" alt="trophies" />
+
+<div align="center">
+
+<img src="https://github-profile-trophy.vercel.app/?username=0nsku&theme=algolia&no-frame=true&no-bg=true&column=7&margin-w=8" width="620" alt="GitHub trophies" />
 
 </div>
 
