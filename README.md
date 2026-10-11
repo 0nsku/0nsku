@@ -87,13 +87,31 @@ and keep improving the systems behind the scenes.
 
 </div>
 
+<img src="./hd-environment.svg" width="620" alt="environment" />
+
+<div align="center">
+
+<img src="https://go-skill-icons.vercel.app/api/icons?i=windows" width="48" height="48" alt="Windows" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=wsl" width="48" height="48" alt="WSL" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=linux" width="48" height="48" alt="Linux" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=debian" width="48" height="48" alt="Debian/Ubuntu" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=cursor" width="48" height="48" alt="Cursor" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=vscode" width="48" height="48" alt="VS Code" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=powershell" width="48" height="48" alt="PowerShell" />
+<img src="./zsh.svg" width="48" height="48" alt="Zsh" />
+
+<br>
+<samp>Windows · WSL · Linux · Ubuntu · Cursor · VS Code · PowerShell · Zsh</samp>
+
+</div>
+
 <img src="./hd-stats.svg" width="620" alt="stats" />
 
 <div align="center">
 
 <img src="./streak.svg?v=3" width="620" alt="Current and longest coding streak" />
 
-<img src="./langs.svg?v=4" width="620" alt="Top languages by bytes and repository count" />
+<img src="./langs.svg?v=3" width="620" alt="Top languages by bytes and repository count" />
 
 <img src="./year.svg?v=3" width="620" alt="ASCII contribution chart for the last year" />
 

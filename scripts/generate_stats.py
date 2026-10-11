@@ -1074,6 +1074,7 @@ def main():
         ("languages", "languages"),
         ("frameworks-libraries", "frameworks & libraries"),
         ("tools-platforms", "tools & platforms"),
+        ("environment", "environment"),
         ("stats", "stats"),
         ("visitors", "visitors"),
     ):
