@@ -92,19 +92,31 @@ and keep improving the systems behind the scenes.
 <div align="center">
 
 <img src="https://go-skill-icons.vercel.app/api/icons?i=windows" width="48" height="48" alt="Windows" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=macos" width="48" height="48" alt="macOS" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=android" width="48" height="48" alt="Android" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=wsl" width="48" height="48" alt="WSL" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=linux" width="48" height="48" alt="Linux" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=debian" width="48" height="48" alt="Debian/Ubuntu" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=raspberrypi" width="48" height="48" alt="Raspberry Pi" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=cursor" width="48" height="48" alt="Cursor" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=vscode" width="48" height="48" alt="VS Code" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=pycharm" width="48" height="48" alt="PyCharm" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=neovim" width="48" height="48" alt="Neovim" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=zed" width="48" height="48" alt="Zed" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=devin" width="48" height="48" alt="Devin" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=claude" width="48" height="48" alt="Claude" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=copilot" width="48" height="48" alt="GitHub Copilot" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=powershell" width="48" height="48" alt="PowerShell" />
 <img src="./zsh.svg" width="48" height="48" alt="Zsh" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=termius" width="48" height="48" alt="Termius" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=alacritty" width="48" height="48" alt="Alacritty" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=kitty" width="48" height="48" alt="Kitty" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=wezterm" width="48" height="48" alt="WezTerm" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=gnome" width="48" height="48" alt="GNOME" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=kde" width="48" height="48" alt="KDE" />
 
 <br>
-<samp>Windows · WSL · Linux · Ubuntu · Cursor · VS Code · Devin · Claude · Copilot · PowerShell · Zsh</samp>
+<samp>Windows · macOS · Android · WSL · Linux · Ubuntu · Raspberry Pi · Cursor · VS Code · PyCharm · Neovim · Zed · Devin · Claude · Copilot · PowerShell · Zsh · Termius · Alacritty · Kitty · WezTerm · GNOME · KDE</samp>
 
 </div>
 
