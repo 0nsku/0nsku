@@ -68,9 +68,36 @@ and keep improving the systems behind the scenes.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=bun" width="48" height="48" alt="Bun" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=discord" width="48" height="48" alt="Discord.js" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=prisma" width="48" height="48" alt="Prisma" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=vue" width="48" height="48" alt="Vue" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=remix" width="48" height="48" alt="Remix" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=bootstrap" width="48" height="48" alt="Bootstrap" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=materialui" width="48" height="48" alt="MUI" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=shadcn" width="48" height="48" alt="shadcn/ui" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=chakraui" width="48" height="48" alt="Chakra UI" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=radix" width="48" height="48" alt="Radix UI" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=framer" width="48" height="48" alt="Framer Motion" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=deno" width="48" height="48" alt="Deno" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=flask" width="48" height="48" alt="Flask" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=pytorch" width="48" height="48" alt="PyTorch" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=numpy" width="48" height="48" alt="NumPy" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=pytest" width="48" height="48" alt="Pytest" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=dotnet" width="48" height="48" alt=".NET" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=laravel" width="48" height="48" alt="Laravel" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=swift" width="48" height="48" alt="SwiftUI" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=reactnative" width="48" height="48" alt="React Native" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=mongoose" width="48" height="48" alt="Mongoose" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=drizzle" width="48" height="48" alt="Drizzle" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=graphql" width="48" height="48" alt="GraphQL" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=vitest" width="48" height="48" alt="Vitest" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=playwright" width="48" height="48" alt="Playwright" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=redux" width="48" height="48" alt="Redux" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=authjs" width="48" height="48" alt="NextAuth" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=threejs" width="48" height="48" alt="Three.js" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=discord" width="48" height="48" alt="discord.py" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=electron" width="48" height="48" alt="Electron" />
 
 <br>
-<samp>React · Next.js · Node.js · FastAPI · Flutter · Astro · Tailwindite · Webpack · Bun · Discord.js · Prisma</samp>
+<samp>React · Next.js · Node.js · FastAPI · Flutter · Astro · Tailwind · Vite · Webpack · Bun · Discord.js · Prisma · Vue · Remix · Bootstrap · MUI · shadcn/ui · Chakra UI · Radix UI · Framer Motion · Deno · Flask · PyTorch · NumPy · Pytest · .NET · Laravel · SwiftUI · React Native · Mongoose · Drizzle · GraphQL · Vitest · Playwright · Redux · NextAuth · Three.js · discord.py · Electron</samp>
 
 </div>
 
