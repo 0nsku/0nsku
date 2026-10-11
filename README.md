@@ -96,12 +96,9 @@ and keep improving the systems behind the scenes.
 <img src="https://go-skill-icons.vercel.app/api/icons?i=grafana" width="48" height="48" alt="Grafana" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=sentry" width="48" height="48" alt="Sentry" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=discord" width="48" height="48" alt="Discord" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=slack" width="48" height="48" alt="Slack" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=notion" width="48" height="48" alt="Notion" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=jira" width="48" height="48" alt="Jira" />
 
 <br>
-<samp>Codex · After Effects · Photoshop · Illustrator · Blender · Figma · Git · GitHub · Actions · Docker · Kubernetes · Terraform · Nginx · PostgreSQL · Redis · MongoDB · MySQL · Firebase · Supabase · Postman · Vercel · Netlify · Railway · Cloudflare · AWS · GCP · Azure · Grafana · Sentry · Discord · Slack · Notion · Jira</samp>
+<samp>Codex · After Effects · Photoshop · Illustrator · Blender · Figma · Git · GitHub · Actions · Docker · Kubernetes · Terraform · Nginx · PostgreSQL · Redis · MongoDB · MySQL · Firebase · Supabase · Postman · Vercel · Netlify · Railway · Cloudflare · AWS · GCP · Azure · Grafana · Sentry · Discord</samp>
 
 </div>
 
