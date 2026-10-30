@@ -188,34 +188,3 @@ Most of my work lives in private repositories.
 <img src="./views.svg?v=4" width="420" alt="Views" />
 
 </div>
-
-<!--START_SECTION:waka-->
-```text
-GitHub:
-Contributions 2026       7503
-Current streak           0 days
-Longest streak           77 days
-Public repos             1
-Private repos            115
-
-
-Total this week   0 secs
-
-Languages:
-Python               55.5%        █████████████░░░░░░░░░░░░   55.55 %
-TypeScript           21.8%        █████░░░░░░░░░░░░░░░░░░░░   21.79 %
-CSS                  10.7%        ██░░░░░░░░░░░░░░░░░░░░░░░   10.70 %
-JavaScript           4.1%         █░░░░░░░░░░░░░░░░░░░░░░░░   4.14 %
-HTML                 2.7%         ░░░░░░░░░░░░░░░░░░░░░░░░░   2.73 %
-
-Editors:
-Visual Studio Code   15 hrs 57 mins ████████████████████░░░░░   80.84 %
-Cursor               3 hrs 46 mins ████░░░░░░░░░░░░░░░░░░░░░   19.11 %
-
-OS:
-Windows              19 hrs 38 mins █████████████████████████   100.00 %
-```
-
-*Last updated: 30/10/2026 05:07:40 UTC*
-
-<!--END_SECTION:waka-->
